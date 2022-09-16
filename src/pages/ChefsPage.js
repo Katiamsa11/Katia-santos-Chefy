@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import { TabTitle } from "../utils/Utils";
 
 function ChefsPage() {
-  return (
-    <div>ChefsPage</div>
-  )
+  //function to change tab title dinamically
+  TabTitle("Chefs Home Page");
+  return <div>ChefsPage</div>;
 }
 
 export default ChefsPage;

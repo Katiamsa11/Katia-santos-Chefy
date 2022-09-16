@@ -1,7 +1,11 @@
 import React from "react";
+import SignUp from "../components/SignUp/SignUp";
+import { TabTitle } from "../utils/Utils";
 
 function SignUpPage() {
-  return <div>SignUpPage</div>;
+  //function to change tab title dinamically
+  TabTitle("SignUp Page");
+  return <SignUp />;
 }
 
 export default SignUpPage;
