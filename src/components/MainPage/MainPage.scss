@@ -1,0 +1,79 @@
+.main {
+    text-align: center;
+
+    &__heading {
+        width: 40rem;
+        margin: auto;
+        padding: 1rem 0;
+        font-size: 4rem;
+    }
+    
+    &__select {
+        font-size: 1.5rem;
+        padding: .5rem 5rem;
+        background-color: rgba(0, 128, 128, 0.495);
+        border-color: rgb(223, 146, 3);
+    }
+
+    &__featured-title {
+        margin-top: 10rem;
+        font-size: 3rem;
+    }
+
+    &__card-container {
+        margin: auto;
+        width: calc(100vw - 10rem);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__chef-card {
+        width: 32rem;
+        margin-bottom: 2rem;
+    }
+
+    &__info-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 2rem;
+    }
+
+    &__name-cuisine {
+        text-align: left;
+    }
+
+    &__chef-img {
+        height: 19rem;
+        width: 28rem;
+        object-fit: cover;
+        object-position: top 25% left 0;
+        margin-top: .5rem;
+        padding: 0;
+        border-radius: 15px;
+    }
+
+    &__chef-name {
+        margin: .5rem 0 .25rem 0;
+        font-size: 1.5rem;
+    }
+
+    &__cuisines {
+        margin: 0;
+        font-size: 1.25rem;
+        color: teal;
+    }
+
+    &__chef-rating {
+        font-size: 2rem;
+        margin: 0;
+        color: rgb(223, 146, 3);
+    }
+
+    &__chef-bio {
+        text-align: left;
+        margin: 1rem 2rem;
+        color: rgb(79, 78, 78);
+    }
+}

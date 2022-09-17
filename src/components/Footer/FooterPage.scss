@@ -1,0 +1,24 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  background-color: $color-text-primary;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  padding: 45px 50px;
+  
+  &__right {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+
+  &__copyright {
+    color: $color-title-primary;
+  }
+
+  &__logo {
+    color: $color-title-primary;
+    font-family: $yaseva;
+  }
+}
