@@ -3,7 +3,6 @@ import { fetchChefsById, TabTitle } from "../utils/Utils";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { formatDate } from "../utils/Utils";
-import "../pages/ChefDetailPage.scss";
 
 function ChefsDetailPage() {
   //function to change tab title dinamically

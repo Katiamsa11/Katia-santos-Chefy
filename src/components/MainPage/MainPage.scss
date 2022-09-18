@@ -1,24 +1,39 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/typography";
+
 .main {
-    text-align: center;
+
+    &__card-link {
+         text-decoration: none;
+    }
 
     &__card-container {
-        margin: auto;
-        width: calc(100vw - 10rem);
+
+        @include tablet {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        }
     }
 
     &__chef-card {
-        width: 32rem;
-        margin-bottom: 2rem;
+        margin: 1rem;
+
+        @include tablet {
+            margin: 2.25rem;
+        }
     }
 
     &__info-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 0 2rem;
+        margin: 0 .5rem;
+
+        @include tablet {
+            margin: 0 1.5rem;
+        }
     }
 
     &__name-cuisine {
@@ -27,34 +42,39 @@
 
     &__chef-img {
         height: 19rem;
-        width: 28rem;
+        width: calc(100vw - 1rem - 1rem);
         object-fit: cover;
         object-position: top 25% left 0;
         margin-top: .5rem;
         padding: 0;
         border-radius: 15px;
+
+        @include tablet {
+            height: 19rem;
+            width: calc((100vw - 2.25rem - 2.25rem - 2rem)/2);
+        }
     }
 
     &__chef-name {
         margin: .5rem 0 .25rem 0;
-        font-size: 1.5rem;
+        color: $color-text-primary;
     }
 
     &__cuisines {
         margin: 0;
         font-size: 1.25rem;
-        color: teal;
+        color: $color-background-primary;
     }
 
     &__chef-rating {
         font-size: 2rem;
         margin: 0;
-        color: rgb(223, 146, 3);
+        color: $color-secondary-brand;
     }
 
     &__chef-bio {
         text-align: left;
-        margin: 1rem 2rem;
-        color: rgb(79, 78, 78);
+        margin: .75rem .5rem 1.75rem .5rem;
+        color: $color-cta-primary;   
     }
 }

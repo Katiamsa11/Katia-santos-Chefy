@@ -1,22 +1,33 @@
-.main {
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/typography";
+
+.search {
   text-align: center;
+  background-color: $color-background-primary;
 
   &__heading {
-      width: 40rem;
       margin: auto;
-      padding: 1rem 0;
-      font-size: 4rem;
+      padding: 5rem 1rem 0 1rem;
+      color: $color-title-primary;
   }
   
   &__select {
       font-size: 1.5rem;
-      padding: .5rem 5rem;
-      background-color: rgba(0, 128, 128, 0.495);
-      border-color: rgb(223, 146, 3);
+      padding: .5rem calc((100vw - 8.5625rem - 1rem - 1rem)/2);
+      margin: 2rem 0;
+      background-color: $color-background-secondary;
+      color: $color-text-standard;
+      border: solid 2px $color-text-standard;
+      border-radius: 10px;
+
+      @include tablet {
+        padding: .5rem 4rem;
+      }
   }
 
   &__featured-title {
       margin-top: 10rem;
-      font-size: 3rem;
+      color: $color-title-primary;
   }
 }

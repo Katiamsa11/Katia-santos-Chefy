@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderPage from "./components/Header/HeaderPage";
 import FooterPage from "./components/Footer/FooterPage";
-import HomePage from "./pages/HomePage";
+import LandingPage from "./pages/LandingPage";
 import ChefsPage from "./pages/ChefsPage";
 import LogInPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
@@ -15,8 +15,8 @@ function App() {
     <BrowserRouter>
       <HeaderPage />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/chefsPage" element={<ChefsPage />} />
+        <Route path="/" element={<ChefsPage />} />
+        <Route path="/landing" element={<LandingPage />} />
         <Route path="/signUp" element={<SignUpPage />} />
         <Route path="/logIn" element={<LogInPage />} />
         <Route path="/chefs/:id" element={<ChefsDetailsPage />} />

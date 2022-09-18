@@ -1,33 +1,45 @@
 import React from "react";
 import "../SearchInput/SearchInput.scss";
-// import { useState, useEffect } from "react";
+
 
 function SearchInput({ filterValueSelected }) {
   const onFilterValueChanged = (event) => {
-    console.log(event.target.value);
     filterValueSelected(event.target.value);
   };
 
   return (
-    <div className="main">
-      <h2 className="main__heading">
+    <div className="search">
+      <h1 className="search__heading">
         Select your location to find chefs near you!
-      </h2>
+      </h1>
       <select
         name="places"
         id="places"
-        className="main__select"
+        className="search__select"
         onChange={onFilterValueChanged}
       >
-        <option value=""></option>
-        <option value="Vancouver">Vancouver</option>
-        <option value="Calgary">Calgary</option>
-        <option value="Toronto">Toronto</option>
-        <option value="Muskoka">Muskoka</option>
-        <option value="Ottawa">Ottawa</option>
-        <option value="Montreal">Montreal</option>
+        <option className="search__option" value="">
+          Location
+        </option>
+        <option className="search__option" value="Vancouver">
+          Vancouver
+        </option>
+        <option className="search__option" value="Calgary">
+          Calgary
+        </option>
+        <option className="search__option" value="Toronto">
+          Toronto
+        </option>
+        <option className="search__option" value="Muskoka">
+          Muskoka
+        </option>
+        <option className="search__option" value="Ottawa">
+          Ottawa
+        </option>
+        <option className="search__option" value="Montreal">
+          Montreal
+        </option>
       </select>
-      <h2 className="main__featured-title">Featured Chefs</h2>
     </div>
   );
 }

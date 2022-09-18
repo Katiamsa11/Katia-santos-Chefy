@@ -35,7 +35,7 @@
     @include desktop {
       display: flex;
       align-items: center;
-    list-style: none;
+      list-style: none;
     }
   }
 
@@ -44,7 +44,7 @@
     @include desktop {
     text-decoration: none;
     font-size: 1rem;
-    color: $color-text-primary;
+    color: $color-title-primary;
     font-family: $roboto;
     padding-left: 2rem;
   }
@@ -59,7 +59,7 @@
   &__logo {
     font-family: $yaseva;
     padding-right: 1rem;
-    color: $color-text-primary;
+    color: $color-title-primary;
     margin: 0;
 
     @include tablet {
@@ -81,7 +81,7 @@
 }
 
 .active-link {
-  color: white;
+  color: $color-title-primary;
 }
 
 #menu__toggle {
@@ -117,7 +117,7 @@
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: $color-text-primary;
+  background-color: $color-title-primary;
   transition-duration: .25s;
 }
 .menu__btn > span::before {
@@ -145,7 +145,7 @@
 .menu__item {
   display: block;
   padding: 12px 24px;
-  color: $color-text-primary;
+  color: $color-title-primary;
   font-family: $roboto;
   font-size: 20px;
   font-weight: 600;
