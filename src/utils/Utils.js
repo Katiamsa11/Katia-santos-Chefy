@@ -1,4 +1,5 @@
 import axios from "axios";
+
 // function to change tabs titles dinamically
 export const TabTitle = (newTitle) => {
   return (document.title = newTitle);
@@ -10,11 +11,9 @@ export const formatDate = {
   year: "numeric",
 };
 
+//API URL 
 
-//API URL
-
-const API_URL =
-    process.env.REACT_APP_API_URL || "http://localhost:8080/chefs";
+const API_URL = "http://localhost:8080/chefs"; //|| process.env.REACT_APP_API_URL
 
 //API functions
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { fetchChefs, TabTitle } from "../utils/Utils";
-
 import { useState, useEffect } from "react";
 import MainPage from "../components/MainPage/MainPage";
 import SearchInput from "../components/SearchInput/SearchInput";
+
 
 function ChefsPage() {
   //function to change tab title dinamically
@@ -11,6 +11,7 @@ function ChefsPage() {
 
   const [allChefs, setAllChefs] = useState([]);
   const [isError, setIsError] = useState(false);
+ 
 
   useEffect(() => {
     fetchChefs()
@@ -30,9 +31,13 @@ function ChefsPage() {
   if (isError) {
     return <h1>....There was an unexpected Error. Refresh page!</h1>;
   }
+  const onFilterValueSelected = (filterValue) =>{
+    console.log(filterValue);
+
+  }
   return (
     <>
-      <SearchInput allChefs={allChefs} />
+      <SearchInput filterValueSelected={onFilterValueSelected} />
       {allChefs.map((chef) => {
         return <MainPage key={chef.id} allChefs={chef} />;
       })}
