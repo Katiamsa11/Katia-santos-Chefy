@@ -1,11 +1,43 @@
 import React from "react";
-import { TabTitle } from "../utils/Utils";
+import { fetchChefs, TabTitle } from "../utils/Utils";
+
+import { useState, useEffect } from "react";
 import MainPage from "../components/MainPage/MainPage";
+import SearchInput from "../components/SearchInput/SearchInput";
 
 function ChefsPage() {
   //function to change tab title dinamically
   TabTitle("Chefs Home Page");
-  return <MainPage />;
+
+  const [allChefs, setAllChefs] = useState([]);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    fetchChefs()
+      .then((response) => {
+        setAllChefs(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        setIsError(true);
+      });
+  }, []);
+
+  if (!allChefs) {
+    return <h2>Loading Chefs....</h2>;
+  }
+
+  if (isError) {
+    return <h1>....There was an unexpected Error. Refresh page!</h1>;
+  }
+  return (
+    <>
+      <SearchInput allChefs={allChefs} />
+      {allChefs.map((chef) => {
+        return <MainPage key={chef.id} allChefs={chef} />;
+      })}
+    </>
+  );
 }
 
 export default ChefsPage;

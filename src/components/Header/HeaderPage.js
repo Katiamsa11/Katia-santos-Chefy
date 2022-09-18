@@ -1,7 +1,5 @@
 import React from "react";
 import "../Header/HeaderPage.scss";
-
-import "../headerPage/HeaderPage.scss";
 import { NavLink, Link } from "react-router-dom";
 
 function HeaderPage() {
@@ -51,4 +49,3 @@ function HeaderPage() {
 }
 
 export default HeaderPage;
-
