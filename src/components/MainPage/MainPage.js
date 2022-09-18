@@ -2,10 +2,7 @@ import "../MainPage/MainPage.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 function MainPage({ allChefs }) {
-
-
   return (
     <section className="main">
       <Link

@@ -2,21 +2,24 @@ import React from "react";
 import "../SearchInput/SearchInput.scss";
 // import { useState, useEffect } from "react";
 
-function SearchInput({filterValueSelected}) {
-
-  
-   const onFilterValueChanged=(event) => {
+function SearchInput({ filterValueSelected }) {
+  const onFilterValueChanged = (event) => {
     console.log(event.target.value);
-    filterValueSelected();
-   }
- 
+    filterValueSelected(event.target.value);
+  };
 
   return (
     <div className="main">
       <h2 className="main__heading">
         Select your location to find chefs near you!
       </h2>
-      <select name="places" id="places" className="main__select" onChange={onFilterValueChanged} >
+      <select
+        name="places"
+        id="places"
+        className="main__select"
+        onChange={onFilterValueChanged}
+      >
+        <option value=""></option>
         <option value="Vancouver">Vancouver</option>
         <option value="Calgary">Calgary</option>
         <option value="Toronto">Toronto</option>
