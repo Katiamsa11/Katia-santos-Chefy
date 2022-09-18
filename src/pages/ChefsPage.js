@@ -53,8 +53,8 @@ function ChefsPage() {
 
   const onFilterValueSelected = (filterValue) => {
     setFilterChefs(filterValue);
-    console.log("this is it " + filterValue);
   };
+
   return (
     <>
       <SearchInput filterValueSelected={onFilterValueSelected} />
