@@ -1,0 +1,12 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixin" as *;
+
+
+
+.chefs__title {
+  text-align: center;
+  font-family: $roboto;
+  font-size: 2rem;
+  color: $color-text-primary;
+
+}
