@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-export const Login = () => {
+function Login() {
   const schema = yup.object().shape({
     userName: yup.string().required("User name is Required!"),
     email: yup.string().email().required(),
@@ -46,6 +46,6 @@ export const Login = () => {
       <input className="btn" type="submit" />
     </form>
   );
-};
+}
 
 export default Login;

@@ -17,6 +17,7 @@ const API_URL = "http://localhost:8080/chefs"; //|| process.env.REACT_APP_API_UR
 const API_URL_IMAGES = "http://localhost:8080/images";
 const API_URL_REVIEWS = "http://localhost:8080/reviews";
 
+
 //API functions
 
 export const fetchChefs = () => {
@@ -31,7 +32,7 @@ export const fetchImagesById = (id) => {
   return axios.get(`${API_URL_IMAGES}/${id}/image`);
 };
 
-//fetching images
+//fetching chefs reviews 
 export const fetchReviewsById = (id) => {
   return axios.get(`${API_URL_REVIEWS}/${id}/review`);
 };
