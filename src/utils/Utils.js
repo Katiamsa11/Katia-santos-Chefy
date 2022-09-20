@@ -13,9 +13,9 @@ export const formatDate = {
 
 //API URL 
 
-const API_URL = "http://localhost:8080/chefs"; //|| process.env.REACT_APP_API_URL
-const API_URL_IMAGES = "http://localhost:8080/images";
-const API_URL_REVIEWS = "http://localhost:8080/reviews";
+const API_URL = "http://localhost:8080/chefs" || process.env.REACT_APP_API_URL + "/chefs";
+const API_URL_IMAGES = "http://localhost:8080/images" || process.env.REACT_APP_API_URL + "/images";
+const API_URL_REVIEWS = "http://localhost:8080/reviews" || process.env.REACT_APP_API_URL + "/reviews";
 
 
 //API functions
