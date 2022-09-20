@@ -1,9 +1,9 @@
 import React from "react";
-import { fetchChefs, TabTitle } from "../utils/Utils";
+import { fetchChefs, TabTitle } from "../../utils/Utils";
 import { useState, useEffect } from "react";
-import MainPage from "../components/MainPage/MainPage";
-import SearchInput from "../components/SearchInput/SearchInput";
-import "../pages/ChefsPage.scss";
+import MainPage from "../../components/MainPage/MainPage";
+import SearchInput from "../../components/SearchInput/SearchInput";
+import "../ChefsPage/ChefsPage.scss";
 
 function ChefsPage() {
   //function to change tab title dinamically
