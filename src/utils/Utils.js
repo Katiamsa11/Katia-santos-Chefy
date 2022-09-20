@@ -11,28 +11,28 @@ export const formatDate = {
   year: "numeric",
 };
 
-//API URL 
+//API URL
 
-const API_URL = "http://localhost:8080/chefs" || process.env.REACT_APP_API_URL + "/chefs";
-const API_URL_IMAGES = "http://localhost:8080/images" || process.env.REACT_APP_API_URL + "/images";
-const API_URL_REVIEWS = "http://localhost:8080/reviews" || process.env.REACT_APP_API_URL + "/reviews";
-
+const API_URL = "http://localhost:8080";
+const API_URL_CHEFS = `${API_URL}/chefs`;
+const API_URL_IMAGES = `${API_URL}/images`;
+const API_URL_REVIEWS = `${API_URL}/reviews`;
 
 //API functions
 
 export const fetchChefs = () => {
-  return axios.get(API_URL);
+  return axios.get(API_URL_CHEFS);
 };
 
 export const fetchChefsById = (id) => {
-  return axios.get(`${API_URL}/data/${id}`);
+  return axios.get(`${API_URL_CHEFS}/data/${id}`);
 };
 //fetching images
 export const fetchImagesById = (id) => {
   return axios.get(`${API_URL_IMAGES}/${id}/image`);
 };
 
-//fetching chefs reviews 
+//fetching chefs reviews
 export const fetchReviewsById = (id) => {
   return axios.get(`${API_URL_REVIEWS}/${id}/review`);
 };
