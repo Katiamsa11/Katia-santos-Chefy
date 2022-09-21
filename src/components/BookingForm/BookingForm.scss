@@ -1,5 +1,72 @@
 @use "../../styles/partials/mixin" as *;
 @use "../../styles/partials/variables"as *;
+
+.booking {
+  padding: 2rem;
+  align-items: center;
+  margin: 0 auto;
+  background-color: $color-background-primary;
+
+  &__wrapper {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 3rem - 3rem);
+    height: 42rem;
+    border-radius: 10px;
+  }
+
+  &__container {
+    width: 30rem;
+    margin-right: 2rem;
+
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+  
+  &__group{
+    position: relative;
+  }
+  
+  &__input {
+padding: 10px;
+background: $color-title-primary;
+border-radius: 10px;
+outline: none;
+color: $color-text-primary;
+border: 2px solid $color-background-secondary;
+resize: none;
+width: 100%;
+margin-bottom: 1rem;
+
+  }
+
+  &__label {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color:$color-text-primary;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+  &__input:focus + &__label, &__input:not(:placeholder-shown) + .placeholder{
+    top:-10px;
+    background-color: $color-title-primary;
+    color:$color-background-secondary;
+  }
+
+  &__img {
+    height: 40.7881rem;
+    width: 50rem;
+    object-fit: cover;
+    object-position: top;
+  }
+}
 .modal {
   position: absolute;
   top:50%;

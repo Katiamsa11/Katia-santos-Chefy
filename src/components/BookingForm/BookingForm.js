@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import eventImg from "../../assets/images/booking.jpg"
 import "../BookingForm/BookingForm.scss";
 
 function BookingForm() {
@@ -190,91 +191,109 @@ function BookingForm() {
   };
 
   return (
-    <div className="booking">
-      <h2 className="booking__title">Submit Your Chefy Event.</h2>
+    <section className="booking">
+    <div className="booking__wrapper">
+    <div className="booking__container">
+      <h2 className="booking__title">Submit Your Chefy Event</h2>
       <form className="booking__form" onSubmit={handleSubmit}>
-        <label className="booking__label">Full Name</label>
-        <input
-          type="text"
-          placeholder="Name"
-          className={`form__input ${nameError ? "form__input--error" : ""}`}
-          onChange={handleChangeName}
-          value={name}
-        />
-        {nameError && <p className="error">Full name is required</p>}
-        <label className="booking__label"> Phone Number </label>
-        <input
-          className="booking__input"
-          value={text.recipient}
-          onChange={(e) => setText({ ...text, recipient: e.target.value })}
-        />
-        <label className="booking__label">Event Name</label>
-        <input
-          type="text"
-          placeholder="Event Name"
-          className={`form__input ${
-            eventNameError ? "form__input--error" : ""
-          }`}
-          onChange={handleEventName}
-          value={eventName}
-        />
-        {eventNameError && <p className="error">Event name is required</p>}
-        <label className="booking__label">Event Address</label>
-        <input
-          onChange={handleChangeAddress}
-          value={eventAddress}
-          type="text"
-          placeholder="Event Address"
-          className={`form__input ${addressError ? "form__input--error" : ""}`}
-        />
-        {addressError && <p className="error">Event address is required</p>}
-        <label className="booking__label">Event Date</label>
-        <input
-          onChange={handleChangeDate}
-          value={eventDate}
-          type="date"
-          className={`form__input ${dateError ? "form__input--error" : ""}`}
-        />
-        {dateError && <p className="error">Event Date is required</p>}
-        <label className="booking__label">Choose the experience</label>
-        <input
-          onChange={handleChangePrice}
-          value={price}
-          type="text"
-          className={`form__input ${priceError ? "form__input--error" : ""}`}
-        />
-        {priceError && <p className="error">This field is required!</p>}
-        <label className="booking__label">Number Of Guests</label>
-        <input
-          type="number"
-          min="2"
-          max="10"
-          placeholder="Number of Guests"
-          className={`form__input ${guestError ? "form__input--error" : ""}`}
-          onChange={handleChangeGuests}
-          value={guests}
-        />
-        {guestError && <p className="error">This field is required!</p>}
-        <label className="booking__label">Dietary restrictions</label>
-        <textarea
-          name="allergies"
-          placeholder="tell us about any allergies or restrictions."
-          className={`form__input ${
-            allergiesError ? "form__input--error" : ""
-          }`}
-          onChange={handleChangeAllergies}
-          value={allergies}
-        ></textarea>
-        {allergiesError && <p className="error">This field is required!</p>}
-        <label className="booking__label">Tell us more About your Event</label>
-        <textarea
-          name="Event"
-          placeholder="Describe your event."
-          className={`form__input ${detailError ? "form__input--error" : ""}`}
-          onChange={handleChangeDetails}
-          value={details}
-        ></textarea>
-        {detailError && <p className="error">This field is required!</p>}
+        <div className="booking__group">
+          <input
+            type="text"
+            placeholder=""
+            className="booking__input"
+            onChange={handleChangeName}
+            value={name}
+          />
+          <label className="booking__label">Full Name</label>
+          {nameError && <p className="error">Full name is required</p>}
+          </div>
+          <div className="booking__group">
+          <input
+            className="booking__input"
+            value={text.recipient}
+            onChange={(e) => setText({ ...text, recipient: e.target.value })}
+          />
+          <label className="booking__label"> Phone Number </label>
+          </div>
+          <div className="booking__group">
+          <input
+            type="text"
+            placeholder=""
+            className="booking__input"
+            onChange={handleEventName}
+            value={eventName}
+          />
+          <label className="booking__label">Event Name</label>
+          {eventNameError && <p className="error">Event name is required</p>}
+          </div>
+          <div className="booking__group">
+          <input
+            onChange={handleChangeAddress}
+            value={eventAddress}
+            type="text"
+            placeholder=""
+            className="booking__input"
+          />
+          <label className="booking__label">Event Address</label>
+          {addressError && <p className="error">Event address is required</p>}
+          </div>
+          <div className="booking__group">
+          <input
+            onChange={handleChangeDate}
+            value={eventDate}
+            type="date"
+            className="booking__input"
+          />
+          <label className="booking__label">Event Date</label>
+          {dateError && <p className="error">Event Date is required</p>}
+          </div>
+          <div className="booking__group">
+          <input
+            onChange={handleChangePrice}
+            value={price}
+            type="text"
+            className ="booking__input"
+          />
+          <label className="booking__label">Choose the experience</label>
+          {priceError && <p className="error">This field is required!</p>}
+          </div>
+          <div className="booking__group">
+          <input
+            type="number"
+            min="2"
+            max="10"
+            placeholder=""
+            className="booking__input"
+            onChange={handleChangeGuests}
+            value={guests}
+          />
+          <label className="booking__label">Number Of Guests</label>
+          {guestError && <p className="error">This field is required!</p>}
+          </div>
+          <div className="booking__group">
+          <textarea
+            name="allergies"
+            placeholder=""
+            className="booking__input"
+            onChange={handleChangeAllergies}
+            value={allergies}
+          ></textarea>
+          <label className="booking__label">Dietary restrictions</label>
+          {allergiesError && <p className="error">This field is required!</p>}
+          </div>
+          <div className="booking__group">
+          <textarea
+            name="Event"
+            placeholder=""
+            className="booking__input"
+            onChange={handleChangeDetails}
+            value={details}
+          ></textarea>
+          <label className="booking__label">
+            Tell us more About your Event
+          </label>
+          {detailError && <p className="error">This field is required!</p>}
+          </div>
         <button onClick={sendText} className="booking__btn">
           Submit
         </button>
@@ -293,6 +312,9 @@ function BookingForm() {
         )}
       </form>
     </div>
+    <img src={eventImg} className="booking__img"/>
+    </div>
+    </section>
   );
 }
 
