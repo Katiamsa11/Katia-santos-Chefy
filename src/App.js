@@ -13,7 +13,7 @@ import "./App.scss";
 function App() {
   return (
     <BrowserRouter>
-      <HeaderPage />
+      
       <Routes>
         <Route path="/" element={<ChefsPage />} />
         <Route path="/landing" element={<LandingPage />} />
