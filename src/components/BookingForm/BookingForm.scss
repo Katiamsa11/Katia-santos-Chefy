@@ -1,0 +1,49 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables"as *;
+.modal {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px 5px;
+  background: white;
+  overflow: auto;
+  width: 95%;
+  height: 12rem;
+  text-align: center;
+  border-radius: 0.25rem;
+
+
+  @include desktop {
+    width: 50%;
+  }
+
+
+&__title {
+  color: $color-text-primary;
+  font-size: 1.5rem;
+}
+
+&__text {
+  color: $color-text-primary;
+  font-size: 1rem;
+}
+
+&__button {
+  display: block;
+  background-color: $color-cta-primary;
+  color: $color-title-primary;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  height: 2.5rem;
+  width: 10.0437rem;
+  text-align: center;
+  padding: .625rem 0;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-cta-hover;
+  }
+}
+}
