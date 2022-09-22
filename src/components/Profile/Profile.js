@@ -2,6 +2,7 @@ import React from "react";
 import { deleteBookings, fetchBookings } from "../../utils/Utils";
 import { useState, useEffect } from "react";
 import "../../components/Profile/Profile.scss";
+import chefyLogo from "../../assets/logo/chefy-logo.JPG"
 
 function Profile() {
   const [allBookings, setAllBookings] = useState([]);
@@ -57,18 +58,23 @@ function Profile() {
     </div>
     <h3 className="profile__subtitle">Welcome User</h3>
     </div>
+    
       {allBookings.map((booking) => {
         return (
-          <div className="profile__container" key={booking.id}>
-            <p>{booking.name}</p>
-            <p>{booking.phone}</p>
-            <p>{booking.eventName}</p>
-            <p>{booking.eventAddress}</p>
-            <p>{booking.eventDate}</p>
-            <p>{booking.guests}</p>
-            <p>{booking.price}</p>
-            <p>{booking.allergies}</p>
-            <p>{booking.details}</p>
+          <div  className="profile__flex-container" key={booking.id}>
+          <div className="profile__flex-card">
+          <div className="profile__title-container">
+            <img src={chefyLogo} className="profile__logo"/>
+            <h3 className="profile__event-name">{booking.eventName}</h3>
+            </div>
+            <div className="profile__description">
+            <p className="profile__item">Name: {booking.fullName}</p>
+            <p className="profile__item">Event Address: {booking.eventAddress}</p>
+            <p className="profile__item">Event Date: {booking.eventDate}</p>
+            <p className="profile__item">Experience Price Estimated: ${booking.price}</p>
+            <p className="profile__item">Amount of Guests: {booking.guests}</p>
+            <p className="profile__item">Allergies and restrictions: {booking.restrictions}</p>
+            </div>
             <button
               className="delete__delete button button--delete"
               onClick={() => {
@@ -77,7 +83,8 @@ function Profile() {
             >
               Delete
             </button>
-          </div>
+            </div>
+            </div>
         );
       })}
     </section>

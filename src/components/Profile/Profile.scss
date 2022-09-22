@@ -3,6 +3,7 @@
 
 
 .profile {
+  padding: 0 1.5rem;
   
   &__wrapper {
     display: flex;
@@ -14,10 +15,59 @@
 
   &__icon {
     border-radius: 50%;
-    background-color: lightgrey;
-    height: 10rem;
-    width: 10rem;
+    background-color: $color-text-standard;
+    height: 12rem;
+    width: 12rem;
+    background-image: url(../../assets/icons/user.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  &__flex-card {
+    background-color:$color-background-primary;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+
+  &__title-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+  }
+
+  &__logo {
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
+    margin-right: 2rem;
+  }
+
+  &__event-name {
+    color: $color-title-primary;
+    font-size: 1.5rem;
+  }
+
+  &__item {
+    color:$color-text-primary;
+  }
+
   }
 
 
-}
+
+
+
+

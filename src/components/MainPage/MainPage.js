@@ -13,7 +13,11 @@ function MainPage({ allChefs }) {
         <div className="main__card-container">
           <div>
             <div className="main__chef-card">
-              <img className="main__chef-img" src={allChefs.image} />
+              <img
+                className="main__chef-img"
+                src={allChefs.image}
+                alt="chef portrait"
+              />
               <div className="main__info-container">
                 <div className="main__name-cuisine">
                   <h4 className="main__chef-name">{allChefs.name}</h4>

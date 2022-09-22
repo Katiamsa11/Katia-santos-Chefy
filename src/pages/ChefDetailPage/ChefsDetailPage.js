@@ -48,11 +48,19 @@ function ChefsDetailPage() {
     <div className="bio">
       <div className="bio__chef-card">
         <div className="bio__chef-img-container">
-          <img className="bio__chef-img" src={selectedChef.image} />
+          <img
+            className="bio__chef-img"
+            src={selectedChef.image}
+            alt="chef portrait"
+          />
           {selectedImage.map((image) => {
             return (
               <div className="bio__img-container">
-                <img className="bio__images" src={image.images} />
+                <img
+                  className="bio__images"
+                  src={image.images}
+                  alt="Food display from chef"
+                />
               </div>
             );
           })}
