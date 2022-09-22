@@ -1,0 +1,23 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.profile {
+  
+  &__wrapper {
+    display: flex;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__icon {
+    border-radius: 50%;
+    background-color: lightgrey;
+    height: 10rem;
+    width: 10rem;
+  }
+
+
+}

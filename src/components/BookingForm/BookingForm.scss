@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     width: calc(100vw - 3rem - 3rem);
-    height: 42rem;
+    height: auto;
     border-radius: 10px;
   }
 
@@ -25,6 +25,7 @@
 
   &__title {
     font-size: 2rem;
+    color: $color-text-primary;
   }
   
   &__group{
@@ -66,6 +67,23 @@ margin-bottom: 1rem;
     object-fit: cover;
     object-position: top;
   }
+
+  &__btn {
+    cursor: pointer;
+    border-radius: 1.25rem;
+    background-color: $color-background-secondary;
+    border: 1px solid $color-background-primary;
+    color: $color-title-primary;
+    padding: .25rem 1rem;
+    flex-grow:1;
+    @include tablet {
+        flex-grow: 0;
+    }
+    &:hover{
+      background-color: $color-cta-primary;
+  }
+
+    }
 }
 .modal {
   position: absolute;

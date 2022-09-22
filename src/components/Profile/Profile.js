@@ -1,6 +1,7 @@
 import React from "react";
 import { deleteBookings, fetchBookings } from "../../utils/Utils";
 import { useState, useEffect } from "react";
+import "../../components/Profile/Profile.scss";
 
 function Profile() {
   const [allBookings, setAllBookings] = useState([]);
@@ -14,6 +15,7 @@ function Profile() {
         console.log(response.data);
       })
       .catch((error) => {
+        console.log(error);
         setIsError(true);
       });
   }, []);
@@ -37,8 +39,7 @@ function Profile() {
   const handleDelete = (id) => {
     deleteBookings(id)
       .then((response) => {
-        console.log(response);
-        setSuccess("The booking Was Deleted Successfully!");
+        setSuccess(response.data);
         getData();
       })
       .catch((error) => {
@@ -48,10 +49,17 @@ function Profile() {
   };
 
   return (
-    <div>
+    <section className="profile">
+    <div className="profile__wrapper">
+    <div className="profile__icon"></div>
+    <h2 className="profile__title">Your Events</h2>
+    <div className="profile__top">
+    </div>
+    <h3 className="profile__subtitle">Welcome User</h3>
+    </div>
       {allBookings.map((booking) => {
         return (
-          <div key={booking.id}>
+          <div className="profile__container" key={booking.id}>
             <p>{booking.name}</p>
             <p>{booking.phone}</p>
             <p>{booking.eventName}</p>
@@ -72,7 +80,7 @@ function Profile() {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 }
 
