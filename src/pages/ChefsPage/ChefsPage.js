@@ -19,9 +19,9 @@ function ChefsPage() {
     fetchChefs()
       .then((response) => {
         setAllChefs(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
+        console.log(error);
         setIsError(true);
       });
   }, []);
@@ -61,9 +61,11 @@ function ChefsPage() {
     <>
       <SearchInput filterValueSelected={onFilterValueSelected} />
       <h2 className="chefs__title">{`${title} Chefs`}</h2>
-      {filterLocations.map((chef) => {
-        return <MainPage key={chef.id} allChefs={chef} />;
-      })}
+      <div className="chefs__card-container">
+        {filterLocations.map((chef) => {
+          return <MainPage key={chef.id} allChefs={chef} />;
+        })}
+      </div>
     </>
   );
 }

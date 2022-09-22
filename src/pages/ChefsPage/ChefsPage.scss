@@ -1,12 +1,25 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
 
-
-
 .chefs__title {
   text-align: center;
   font-family: $roboto;
   font-size: 2rem;
   color: $color-text-primary;
 
+}
+
+.chefs__card-container {
+  margin: 0 1rem;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 2.25rem;
+  }
+
+  @include desktop {
+    margin: 0 8rem;
+  }
 }

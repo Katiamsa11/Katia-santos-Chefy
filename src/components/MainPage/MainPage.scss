@@ -3,25 +3,20 @@
 
 
 .main {
-
+    
     &__card-link {
          text-decoration: none;
-    }
-
-    &__card-container {
-
-        @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        }
+         width: calc((100vw - 3.25rem - 3.25rem - 2rem)/2);
     }
 
     &__chef-card {
-        margin: 1rem;
 
         @include tablet {
-            margin: 2.25rem;
+            width: calc((100vw - 2.25rem - 2.25rem - 2rem) / 2);
+        }
+
+        @include desktop {
+            width: calc((100vw)/4);;
         }
     }
 
@@ -32,7 +27,7 @@
         margin: 0 .5rem;
 
         @include tablet {
-            margin: 0 1.5rem;
+            margin: 0 .75rem;
         }
     }
 
@@ -41,17 +36,23 @@
     }
 
     &__chef-img {
-        height: 19rem;
+        height: calc(100vw - 1rem - 1rem);
+        max-height: 31rem;
         width: calc(100vw - 1rem - 1rem);
         object-fit: cover;
-        object-position: top 25% left 0;
+        object-position: top 10% left 0;
         margin-top: .5rem;
         padding: 0;
         border-radius: 15px;
 
         @include tablet {
-            height: 19rem;
-            width: calc((100vw - 2.25rem - 2.25rem - 2rem)/2);
+            height: calc((100vw - 2.25rem - 2.25rem - 2rem) / 2);
+            width: calc((100vw - 2.25rem - 2.25rem - 2rem) / 2);
+        }
+
+        @include desktop {
+            height: calc((100vw - 3rem - 3rem - 4rem)/4);
+            width: calc((100vw)/4);
         }
     }
 
@@ -62,19 +63,22 @@
 
     &__cuisines {
         margin: 0;
-        font-size: 1.25rem;
         color: $color-background-primary;
     }
 
     &__chef-rating {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin: 0;
         color: $color-secondary-brand;
     }
 
     &__chef-bio {
         text-align: left;
-        margin: .75rem .5rem 1.75rem .5rem;
+        margin: .5rem .5rem 1.75rem .5rem;
         color: $color-cta-primary;   
+
+        @include tablet {
+            margin: .5rem .75rem 1.75rem .75rem; 
+        }
     }
 }
