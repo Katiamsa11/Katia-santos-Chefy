@@ -5,52 +5,235 @@
 .bio {
     padding: 0 1rem;
 
+    @include tablet {
+        padding: 0 2.25rem;
+    }
+
     @include desktop {
         padding: 0 3rem;
     }
 
-    &__chef-img-container {
+    &__hero-container {
 
         @include desktop {
             display: flex;
+        }
+    }
+
+    &__profile-container {
+        
+        @include tablet {
+            display: flex;
             align-items: center;
-            justify-content: space-between;
+        }
+
+        @include desktop {
+            display: inline-block;
+            width: 20rem;
         }
     }
 
     &__chef-img {
-        width: 25rem;
-        height: 25rem;
+        width: calc(100vw - 1rem - 1rem);
+        height: calc(100vw - 1rem - 1rem);
         object-fit: cover;
         object-position: top;
-        border-radius: 50%;
-        margin-top: 5rem;
-    }
+        border-radius: 15px;
+        margin-top: 4rem;
 
-    &__images {
-        width: 15rem;
-    }
+        @include tablet {
+            margin-top: 3rem;
+            height: 17.25rem;
+            flex-basis: 30%;
+        }
 
-    &__body-container {
-        display: flex;
-        justify-content: space-between;
+        @include desktop {
+            flex-basis: auto;
+            margin-top: 5rem;
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50% ;
+        }
     }
 
     &__info-container {
-        width: 25rem;
+        width: calc(100vw - 1rem - 1rem);
+
+        @include tablet {
+            margin: 4.5rem 0 2.25rem 1rem;
+            flex-basis: 70%;
+        }
+
+        @include desktop {
+            width: auto;
+            margin: 0;
+        }
+    }
+
+    &__name-cuisine-rating {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+    }
+
+    &__chef-name {
+        margin: .5rem 0 .25rem 0;
+        color: $color-text-primary;
+    }
+
+    &__cuisines {
+        color: $color-background-primary;
+        font-size: 1.05rem;
+        margin-top: 0.25rem;
+    }
+
+    &__chef-rating {
+        font-size: 1.5rem;
+        color: $color-secondary-brand;
+
+        @include tablet {
+            margin: 0 2.25rem;
+        }
     }
 
     &__long-bio {
-        width: 35rem;
+        width: calc(100vw - 1rem - 1rem);
+
+        @include tablet {
+            width: auto;
+        }
+
+        @include desktop {
+            width: 38rem;
+        }
+    }
+
+    &__img-container {
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            margin: 5rem 0 0 1rem;
+            width: calc(100vw - 3rem - 3rem - 20rem - 1rem);
+            height: 25rem;
+        }
+
+    }
+
+    &__images {
+        width: calc(100vw - 1rem - 1rem);
+        height: calc(100vw - 1rem - 1rem - 5rem);
+        object-fit: cover;
+        margin: .5rem 0;
+        border-radius: 15px;
+
+        @include tablet {
+            width: calc((100vw - 2.25rem - 2.25rem - 2rem) / 4);
+            height: calc((100vw - 2.25rem - 2.25rem - 2rem) / 4);
+            margin: .25rem 0;
+        }
+
+        @include desktop {
+            width: 13rem;
+            height: 15rem;
+            padding: 0;
+            margin: 2.5rem 0;
+        }
+    }
+
+    &__body-container {
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    &__booking-header {
+        margin-top: 2.25rem;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__booking-container {
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__booking-link {
+        text-decoration: none;
+    }
+
+    &__booking-card {
+        width: calc(100vw - 1rem - 1rem);
+        color: $color-text-primary;
+        border: 2px solid $color-background-secondary;
+        border-radius: 15px;
+        padding: 0.25rem .5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        transition: .5s background-color, .5s color;
+
+        &:hover {
+            background-color: $color-background-secondary;
+            color: $color-title-primary;
+        }
+
+        @include tablet {
+            width: calc((100vw - 2.25rem - 2.25rem - 2rem) / 3);
+        }
+    }
+
+    &__review-header {
+        margin-top: 2rem;
+    }
+
+    &__reviews-container {
+        
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        @include desktop {
+            display: inline-block;
+        }
     }
 
     &__review-card {
-        width: 35rem;
+        width: calc(100vw - 1rem - 1rem);
         border: 1px solid $color-cta-primary;
         border-radius: 10px;
         background-color: $color-text-standard;
         padding: .25rem 1rem;
         margin: 1rem 0;
+        
+        @include tablet {
+            width: calc((100vw - 2.25rem - 2.25rem - 1rem) / 2);
+            margin: .5rem 0;
+        }
+
+        @include desktop {
+            width: 38rem;
+        }
     }
 
     &__review-info {
@@ -58,12 +241,114 @@
         justify-content: space-between;
     }
 
-    &__booking {
-        border: 1px solid black;
-        width: 25rem;
-        height: 30rem;
-        position: fixed;
-        margin-left: 60%;
-        margin-bottom: 10%;
+    &__icon-reviewer {
+        display: flex;
+        align-items: center;
     }
+
+    &__user-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 1px solid $color-cta-primary;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        margin-right: .5rem;
+    }
+
+    &__reviewer {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    &__date {
+        align-self: end;
+    }
+
+    &__booking {
+        border-top: 1px solid $color-cta-primary;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include desktop {
+            flex-direction: column;
+            justify-content: center;
+            bottom: auto;
+            top: 45%;
+            left: auto;
+            right: 3rem;
+            width: 30rem;
+            height: 20rem;
+            border: 1px solid rgba(0, 0, 0, 0.034);
+            border-radius: 15px;   
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);     
+        }
+    }
+
+    &__book-heading-hidden {
+        display: none;
+        
+        @include desktop {
+            display: inline-block;
+        }
+    }
+
+    &__book-info {
+        margin-left: 1rem;
+
+        @include tablet {
+            margin-left: 2.25rem;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__book-name {
+        margin-bottom: 0;
+    }
+
+    &__book-location {
+        color: $color-background-primary;
+        font-size: 1.05rem;
+        margin-top: 0.25rem;
+    }
+
+    &__book-link {
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        margin-right: 1rem;
+
+        @include tablet {
+            margin-right: 2.25rem;
+        }
+    }
+
+    &__book-button {
+        background-color: $color-background-secondary;
+        border-radius: 10px;
+        width: 7.5rem;
+        margin: auto;
+    }
+
+    &__book-title {
+        padding: .75rem 1rem;
+        color: $color-title-primary;
+        margin: 0;
+    }
+
 }
