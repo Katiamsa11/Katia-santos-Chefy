@@ -5,7 +5,7 @@ import eventImg from "../../assets/images/booking.jpg";
 import "../BookingForm/BookingForm.scss";
 
 function BookingForm() {
-  const API_URL = "http://localhost:8080";
+  const API_URL = "https://chefy-chefs-delivered.herokuapp.com";
   // Set State
   const [name, setName] = useState("");
   const [eventName, setEventName] = useState("");
@@ -301,7 +301,7 @@ function BookingForm() {
             <p className="newWarehouse-form__error">{isError}</p>
             {success && (
               <div className="modal">
-                <h2 className="modal__title">Video Uploaded</h2>
+                <h2 className="modal__title">Request Submitted</h2>
                 <p className="modal__text">
                   You Will Be Redirected to Your Profile Page.
                 </p>

@@ -12,13 +12,11 @@ export const formatDate = {
 };
 
 //API URL
-
-const API_URL = "http://localhost:8080";
+const API_URL = "https://chefy-chefs-delivered.herokuapp.com";
 const API_URL_CHEFS = `${API_URL}/chefs`;
 const API_URL_IMAGES = `${API_URL}/images`;
 const API_URL_REVIEWS = `${API_URL}/reviews`;
 const API_URL_Events = `${API_URL}/events`;
-
 //API functions
 
 export const fetchChefs = () => {
