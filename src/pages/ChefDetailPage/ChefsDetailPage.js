@@ -74,7 +74,7 @@ function ChefsDetailPage() {
                   <img
                     className="bio__images"
                     src={image.images}
-                    alt="plating images of food"
+                    alt="plating of food"
                   />
                 );
               })}
@@ -92,13 +92,13 @@ function ChefsDetailPage() {
               <Link to="/booking" className="bio__booking-link">
                 <div className="bio__booking-card">
                   <h4 className="bio__booking-type">Premium</h4>
-                  <p className="bio__booking-price">$140 - $200 per person</p>
+                  <p className="bio__booking-price">$120 - $180 per person</p>
                 </div>
               </Link>
               <Link to="/booking" className="bio__booking-link">
                 <div className="bio__booking-card">
                   <h4 className="bio__booking-type">High-End</h4>
-                  <p className="bio__booking-price">$220 - $320 per person</p>
+                  <p className="bio__booking-price">$180 - $220 per person</p>
                 </div>
               </Link>
             </div>

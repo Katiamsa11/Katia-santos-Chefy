@@ -9,6 +9,7 @@ import ChefsDetailsPage from "./pages/ChefDetailPage/ChefsDetailPage";
 import BookingFormPage from "./pages/BookingPage";
 import ProfilePage from "./pages/ProfilePage";
 import "./App.scss";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/chefs/:id" element={<ChefsDetailsPage />} />
         <Route path="/booking" element={<BookingFormPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <FooterPage />
     </BrowserRouter>

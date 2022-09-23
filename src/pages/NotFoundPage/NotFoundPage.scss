@@ -1,0 +1,28 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+
+.notFound {
+  height: 100vh;
+  padding: 0 1.5rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: $color-text-primary;
+  }
+
+  &__link {
+    color: $color-background-primary;
+    font-size:1rem;
+    cursor: pointer;
+
+  }
+
+}
