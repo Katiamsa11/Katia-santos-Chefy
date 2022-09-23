@@ -10,7 +10,7 @@ import {
 } from "../../utils/Utils";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import userIcon from "../../assets/icons/user.png";
+import userIcon from "../../assets/icons/user.svg";
 
 function ChefsDetailPage() {
   //function to change tab title dinamically

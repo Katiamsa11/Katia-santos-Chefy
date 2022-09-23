@@ -2,7 +2,6 @@ import React from "react";
 import { deleteBookings, fetchBookings } from "../../utils/Utils";
 import { useState, useEffect } from "react";
 import "../../components/Profile/Profile.scss";
-import chefyLogo from "../../assets/logo/chefy-logo.JPG";
 
 function Profile() {
   const [allBookings, setAllBookings] = useState([]);
@@ -64,30 +63,34 @@ function Profile() {
             <div className="profile__flex-container" key={booking.id}>
               <div className="profile__flex-card">
                 <div className="profile__title-container">
-                  <img
-                    src={chefyLogo}
-                    className="profile__logo"
-                    alt="chefy logo"
-                  />
+                  <h2 className="profile__logo">chefy</h2>
                   <h3 className="profile__event-name">{booking.eventName}</h3>
                 </div>
                 <div className="profile__description">
-                  <p className="profile__item">Name: {booking.fullName}</p>
-                  <p className="profile__item">
-                    Event Address: {booking.eventAddress}
-                  </p>
-                  <p className="profile__item">
-                    Event Date: {booking.eventDate}
-                  </p>
-                  <p className="profile__item">
-                    Experience Price Estimated: ${booking.price}
-                  </p>
-                  <p className="profile__item">
-                    Amount of Guests: {booking.guests}
-                  </p>
-                  <p className="profile__item">
-                    Allergies and restrictions: {booking.restrictions}
-                  </p>
+                  <div className="profile__text-container">
+                    Name:
+                    <p className="profile__item">{booking.fullName}</p>
+                  </div>
+                  <div className="profile__text-container">
+                    Event Address:
+                    <p className="profile__item">{booking.eventAddress}</p>
+                  </div>
+                  <div className="profile__text-container">
+                    Event Date:
+                    <p className="profile__item">{booking.eventDate}</p>
+                  </div>
+                  <div className="profile__text-container">
+                    Estimated Price To Pay:
+                    <p className="profile__item">${booking.price}</p>
+                  </div>
+                  <div className="profile__text-container">
+                    Amount of Guests:
+                    <p className="profile__item">{booking.guests}</p>
+                  </div>
+                  <div className="profile__text-container">
+                    Allergies & Restrictions:
+                    <p className="profile__item">{booking.restrictions}</p>
+                  </div>
                 </div>
                 <button
                   className="profile__button"
@@ -95,7 +98,7 @@ function Profile() {
                     handleDelete(booking.id);
                   }}
                 >
-                  Delete
+                  Cancel Event
                 </button>
               </div>
             </div>

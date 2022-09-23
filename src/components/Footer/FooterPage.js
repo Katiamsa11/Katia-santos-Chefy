@@ -12,15 +12,15 @@ function FooterPage() {
           <h2 className="footer__logo">chefy.</h2>
         </Link>
         <div className="footer__right">
-          <Link to={"http://www.instagram.com"} target="_blank">
+          <a href="http://www.instagram.com" target="_blank" rel="noreferrer">
             <img src={instagram} alt="instagram" className="footer__icon" />
-          </Link>
-          <Link to={"https://www.facebook.com"} target="_blank">
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
             <img src={facebook} alt="facebook" className="footer__icon" />
-          </Link>
-          <Link to={"https://twitter.com"} target="_blank">
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noreferrer">
             <img src={twitter} alt="twitter" className="footer__icon" />
-          </Link>
+          </a>
         </div>
       </div>
       <p className="footer__copyright">Created by Katia Santos &copy; 2022</p>
