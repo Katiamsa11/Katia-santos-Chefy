@@ -55,7 +55,7 @@ function ChefsDetailPage() {
               <img
                 className="bio__chef-img"
                 src={selectedChef.image}
-                alt="chef profile portrait"
+                alt="chef portrait"
               />
               <div className="bio__info-container">
                 <div className="bio__name-cuisine-rating">
@@ -74,7 +74,7 @@ function ChefsDetailPage() {
                   <img
                     className="bio__images"
                     src={image.images}
-                    alt="plating of food"
+                    alt="Food styling"
                   />
                 );
               })}
@@ -111,7 +111,11 @@ function ChefsDetailPage() {
                   <div className="bio__review-card">
                     <div className="bio__review-info">
                       <div className="bio__icon-reviewer">
-                        <img className="bio__user-icon" src={userIcon} />
+                        <img
+                          className="bio__user-icon"
+                          src={userIcon}
+                          alt="user icon"
+                        />
                         <p className="bio__reviewer">{review.reviewer}</p>
                       </div>
                       <p className="comment__date">

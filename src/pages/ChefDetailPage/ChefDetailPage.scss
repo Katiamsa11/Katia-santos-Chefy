@@ -330,7 +330,7 @@
     &__book-link {
         text-decoration: none;
         text-align: center;
-        color: white;
+        color: $color-background-neutral;
         margin-right: 1rem;
 
         @include tablet {
