@@ -55,7 +55,7 @@ function ChefsDetailPage() {
               <img
                 className="bio__chef-img"
                 src={selectedChef.image}
-                alt="chef portrait"
+                alt="chef profile portrait"
               />
               <div className="bio__info-container">
                 <div className="bio__name-cuisine-rating">
@@ -74,7 +74,7 @@ function ChefsDetailPage() {
                   <img
                     className="bio__images"
                     src={image.images}
-                    alt="Food styling"
+                    alt="plating images of food"
                   />
                 );
               })}
@@ -92,13 +92,13 @@ function ChefsDetailPage() {
               <Link to="/booking" className="bio__booking-link">
                 <div className="bio__booking-card">
                   <h4 className="bio__booking-type">Premium</h4>
-                  <p className="bio__booking-price">$120 - $180 per person</p>
+                  <p className="bio__booking-price">$140 - $200 per person</p>
                 </div>
               </Link>
               <Link to="/booking" className="bio__booking-link">
                 <div className="bio__booking-card">
                   <h4 className="bio__booking-type">High-End</h4>
-                  <p className="bio__booking-price">$180 - $220 per person</p>
+                  <p className="bio__booking-price">$220 - $320 per person</p>
                 </div>
               </Link>
             </div>
@@ -139,7 +139,25 @@ function ChefsDetailPage() {
             <h4 className="bio__book-name">{selectedChef.name}</h4>
             <p className="bio__book-location">{selectedChef.location}</p>
           </div>
-          <Link to="/booking" className="bio__book-link">
+          <Link to="/booking" className="bio__booking-link-desktop">
+            <div className="bio__booking-card">
+              <h4 className="bio__booking-type">Standard</h4>
+              <p className="bio__booking-price">$90 - $120 per person</p>
+            </div>
+          </Link>
+          <Link to="/booking" className="bio__booking-link-desktop">
+            <div className="bio__booking-card">
+              <h4 className="bio__booking-type">Premium</h4>
+              <p className="bio__booking-price">$120 - $180 per person</p>
+            </div>
+          </Link>
+          <Link to="/booking" className="bio__booking-link-desktop">
+            <div className="bio__booking-card">
+              <h4 className="bio__booking-type">High-End</h4>
+              <p className="bio__booking-price">$180 - $220 per person</p>
+            </div>
+          </Link>
+          <Link to="/booking" className="bio__booking-link">
             <div className="bio__book-button">
               <h4 className="bio__book-title">Book Now</h4>
             </div>

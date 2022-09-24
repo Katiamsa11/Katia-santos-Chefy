@@ -66,6 +66,7 @@
 
 
   &__confirm {
+    cursor: pointer;
     padding: .5rem 2rem;
     text-align: center;
    text-decoration: none;
@@ -82,6 +83,7 @@
 
   &__cancel {
     display: none;
+    cursor: pointer;
     @include tablet {
       text-decoration: none;
       color:$color-background-secondary;

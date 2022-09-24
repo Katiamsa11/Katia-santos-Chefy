@@ -20,6 +20,7 @@
       color: $color-text-standard;
       border: solid 2px $color-text-standard;
       border-radius: 10px;
+      cursor: pointer;
 
       @include tablet {
         padding: .5rem 4rem;
