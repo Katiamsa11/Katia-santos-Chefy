@@ -8,24 +8,28 @@ import accountIcon from "../../assets/icons/user-solid.svg";
 function HeaderPage() {
   return (
     <div className="header">
-    <NavLink to="/" className="header__link header__logo-link">
+      <NavLink to="/" className="header__link header__logo-link">
         <h2 className="header__logo">chefy.</h2>
-    </NavLink>
-    <div className="header__container">
-        <NavLink to="/" className="header__link">
-            <img className="header__icon" src={homeIcon} alt="home icon" />
-            <p className="header__title">home</p>
+      </NavLink>
+      <div className="header__container">
+        <NavLink to="/home" className="header__link">
+          <img className="header__icon" src={homeIcon} alt="home icon" />
+          <p className="header__title">home</p>
         </NavLink>
-        <NavLink to="/landing" className="header__link">
-            <img className="header__icon" src={aboutIcon} alt="information icon" />
-            <p className="header__title">about</p>
+        <NavLink to="/" className="header__link">
+          <img
+            className="header__icon"
+            src={aboutIcon}
+            alt="information icon"
+          />
+          <p className="header__title">about</p>
         </NavLink>
         <NavLink to="/profile" className="header__link">
-            <img className="header__icon" src={accountIcon} alt="user icon" />
-            <p className="header__title">account</p>
+          <img className="header__icon" src={accountIcon} alt="user icon" />
+          <p className="header__title">account</p>
         </NavLink>
+      </div>
     </div>
-</div>
   );
 }
 export default HeaderPage;
