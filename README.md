@@ -1,7 +1,17 @@
-# ABOUT CHEFY
+# 👾 About Me 
+   👩‍💻 Currently finalizing Web development Bootcamp with Brain Station
+   🧠  Love for tech, food and innovation
+   💓  Passionate about learning more coding languages
+   🛠️  New to coding and hoping to grow in the tech industry 
+   
+## About Chefy
+Chefy is a web-based platform to connect chefs with households for private in-home dining experiences. Clients can search for and book the chef best suited for their event.
+Thank you for checking my project! 
 
-Chefy is a web-based platform to connect chefs with households for private in-home dining experiences. Clients can search for and book the chef best suited for their event. Tools used: React, Sass, Node, Express and MySQL for the database.
-Thank you for checking my project!
+## 💻  Main tech Tools used for this project 
+HTML5  CSS  Sass  JavaScript  React  
+Git  GitHub  MySQL Node Express 
+
 
 ## SET UP FRONT-END
 
@@ -22,3 +32,4 @@ npm start
 ```
 
 4. The server is deployed in Heroku so no need to connect with the back-end.
+
