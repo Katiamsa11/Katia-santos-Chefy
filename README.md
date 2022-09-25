@@ -15,14 +15,18 @@ Chefy is my capstone project for BrainStation's full-stack bootcamp. Where we ha
 Thank you for checking my project! 
 
 
-![Alt text](/src/assets/images/chefy-home.jpg "Chefy Home Page"),
-![Alt text](/src/assets/images/chefy-app.jpg "Chefy APP"),
+![Alt text](/src/assets/images/chefy-home.jpg "Chefy Home Page")
+
+
+
+![Alt text](/src/assets/images/chefy-app.jpg "Chefy APP")
 
 
 ## 💻  Main tech Tools used for this project 
 ### Front-End
 React-app & Sass
-Git  GitHub
+
+Git & GitHub
 ### Back-End
 Node/Express 
 #### Database 
