@@ -65,11 +65,15 @@
     resize: none;
     width: 100%;
     margin-bottom: 1rem;
+    transition: all .3s linear;
 
     &--error {
       border: 2px solid red;
   }
+
   }
+
+
 
   &__label {
     position: absolute;
@@ -86,6 +90,7 @@
     background-color: $color-title-primary;
     color:$color-background-secondary;
   }
+
 
   &__img {
     width: 100%;
@@ -132,7 +137,7 @@
     }
 &__error {
     color: red;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     line-height: 1rem;
     font-weight: 400;
     flex-basis: 100%;
@@ -141,6 +146,7 @@
     font-style: italic;
     margin: 0;
   }
+ 
 }
 // code to remove date default placeholder 
 input[type=date]::-webkit-datetime-edit-text {
@@ -156,4 +162,8 @@ input[type=date]::-webkit-datetime-edit-text {
   -webkit-appearance: none;
   display: none;
   }
+
+
+
+
 

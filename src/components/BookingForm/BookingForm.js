@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import eventImg from "../../assets/images/booking.jpg";
+import errorImg from "../../assets/icons/error-24px.svg";
 import "../BookingForm/BookingForm.scss";
 import Modal from "../Modal/Modal";
-
 
 function BookingForm() {
   const API_URL = "https://chefy-chefs-delivered.herokuapp.com";
@@ -18,7 +18,7 @@ function BookingForm() {
   const [details, setDetails] = useState("");
   //create state generate success message
   const [success, setSuccess] = useState(false);
-  
+
   //States to generate error messages
   const [nameError, setNameError] = useState(false);
   const [eventNameError, setEventNameError] = useState(false);
@@ -32,7 +32,7 @@ function BookingForm() {
   const [text, setText] = useState({
     recipient: "",
     textmessage:
-      "Your request has been sent to the chef. You will receive a confirmation shortly. Thanks for choosing Chefy!  find me on www.linkedin.com/in/katiamsa11",
+      "Your request has been sent to the chef. You will receive a confirmation shortly. Thanks for choosing Chefy!                                Find me on www.linkedin.com/in/katiamsa11",
   });
 
   const sendText = (_) => {
@@ -46,7 +46,7 @@ function BookingForm() {
     if (nameError) {
       setNameError(false);
     }
-   
+
     setName(event.target.value);
   };
 
@@ -54,7 +54,7 @@ function BookingForm() {
     if (eventNameError) {
       setEventNameError(false);
     }
-    
+
     setEventName(event.target.value);
   };
 
@@ -62,7 +62,7 @@ function BookingForm() {
     if (addressError) {
       setAddressError(false);
     }
-   
+
     setEventAddress(event.target.value);
   };
 
@@ -70,7 +70,7 @@ function BookingForm() {
     if (dateError) {
       setDateError(false);
     }
-   
+
     setDate(event.target.value);
   };
 
@@ -78,7 +78,7 @@ function BookingForm() {
     if (guestError) {
       setGuestError(false);
     }
-   
+
     setGuests(event.target.value);
   };
 
@@ -86,7 +86,7 @@ function BookingForm() {
     if (priceError) {
       setPriceError(false);
     }
-   
+
     setPrice(event.target.value);
   };
 
@@ -94,7 +94,7 @@ function BookingForm() {
     if (allergiesError) {
       setAllergiesError(false);
     }
-    
+
     setAllergies(event.target.value);
   };
 
@@ -102,7 +102,7 @@ function BookingForm() {
     if (detailError) {
       setDetailError(false);
     }
-   
+
     setDetails(event.target.value);
   };
 
@@ -189,17 +189,23 @@ function BookingForm() {
           <form className="booking__form" onSubmit={handleSubmit}>
             <div className="booking__group">
               <input
+              id="name"
                 type="text"
                 placeholder=""
-                className={`booking__input ${
-                  addressError ? "booking__input--error" : ""
-                }`}
+                className="booking__input"
                 onChange={handleChangeName}
                 value={name}
               />
               <label className="booking__label">Full Name</label>
               {nameError && (
-                <p className="booking__error">Full name is required</p>
+                <p className="booking__error">
+                  <img
+                    src={errorImg}
+                    alt="error icon"
+                    className="error__icon"
+                  />
+                  Full name is required
+                </p>
               )}
             </div>
             <div className="booking__group">
@@ -216,15 +222,20 @@ function BookingForm() {
               <input
                 type="text"
                 placeholder=""
-                className={`booking__input ${
-                  addressError ? "booking__input--error" : ""
-                }`}
+                className="booking__input"
                 onChange={handleEventName}
                 value={eventName}
               />
               <label className="booking__label">Event Name</label>
               {eventNameError && (
-                <p className="booking__error">Event name is required</p>
+                <p className="booking__error">
+                  <img
+                    src={errorImg}
+                    alt="error icon"
+                    className="error__icon"
+                  />
+                  Event name is required
+                </p>
               )}
             </div>
             <div className="booking__group">
@@ -233,13 +244,18 @@ function BookingForm() {
                 value={eventAddress}
                 type="text"
                 placeholder=""
-                className={`booking__input ${
-                  addressError ? "booking__input--error" : ""
-                }`}
+                className="booking__input"
               />
               <label className="booking__label">Event Address</label>
               {addressError && (
-                <p className="booking__error">Event address is required</p>
+                <p className="booking__error">
+                  <img
+                    src={errorImg}
+                    alt="error icon"
+                    className="error__icon"
+                  />
+                  Event address is required
+                </p>
               )}
             </div>
             <div className="booking__group">
@@ -247,13 +263,18 @@ function BookingForm() {
                 onChange={handleChangeDate}
                 value={eventDate}
                 type="date"
-                className={`booking__input ${
-                  addressError ? "booking__input--error" : ""
-                }`}
+                className="booking__input"
               />
               <label className="booking__label">Event Date</label>
               {dateError && (
-                <p className="booking__error">Event Date is required</p>
+                <p className="booking__error">
+                  <img
+                    src={errorImg}
+                    alt="error icon"
+                    className="error__icon"
+                  />
+                  Event Date is required
+                </p>
               )}
             </div>
             <div className="booking__group">
@@ -263,9 +284,7 @@ function BookingForm() {
                 onChange={handleChangePrice}
                 value={price}
                 type="text"
-                className={`booking__input ${
-                  addressError ? "booking__input--error" : ""
-                }`}
+                className="booking__input"
               >
                 <option value=""></option>
                 <option value="Basic $90-$120">Basic $90-$120</option>
@@ -275,7 +294,14 @@ function BookingForm() {
 
               <label className="booking__label">Choose the experience</label>
               {priceError && (
-                <p className="booking__error">This field is required!</p>
+                <p className="booking__error">
+                  <img
+                    src={errorImg}
+                    alt="error icon"
+                    className="error__icon"
+                  />
+                  This field is required!
+                </p>
               )}
             </div>
             <div className="booking__group">
@@ -284,39 +310,47 @@ function BookingForm() {
                 min="2"
                 max="10"
                 placeholder=""
-                className={`booking__input ${
-                  addressError ? "booking__input--error" : ""
-                }`}
+                className="booking__input"
                 onChange={handleChangeGuests}
                 value={guests}
               />
               <label className="booking__label">Number Of Guests</label>
               {guestError && (
-                <p className="booking__error">This field is required!</p>
+                <p className="booking__error">
+                  <img
+                    src={errorImg}
+                    alt="error icon"
+                    className="error__icon"
+                  />
+                  This field is required!
+                </p>
               )}
             </div>
             <div className="booking__group">
               <textarea
                 name="allergies"
                 placeholder=""
-                className={`booking__input ${
-                  addressError ? "booking__input--error" : ""
-                }`}
+                className="booking__input"
                 onChange={handleChangeAllergies}
                 value={allergies}
               ></textarea>
               <label className="booking__label">Dietary restrictions</label>
               {allergiesError && (
-                <p className="booking__error">This field is required!</p>
+                <p className="booking__error">
+                  <img
+                    src={errorImg}
+                    alt="error icon"
+                    className="error__icon"
+                  />
+                  This field is required!
+                </p>
               )}
             </div>
             <div className="booking__group">
               <textarea
                 name="Event"
                 placeholder=""
-                className={`booking__input ${
-                  addressError ? "booking__input--error" : ""
-                }`}
+                className="booking__input"
                 onChange={handleChangeDetails}
                 value={details}
               ></textarea>
@@ -324,15 +358,20 @@ function BookingForm() {
                 Tell us more About your Event
               </label>
               {detailError && (
-                <p className="booking__error">This field is required!</p>
+                <p className="booking__error">
+                  <img
+                    src={errorImg}
+                    alt="error icon"
+                    className="error__icon"
+                  />
+                  This field is required!
+                </p>
               )}
             </div>
             <button onClick={sendText} className="booking__btn">
               Submit
             </button>
-            {success && (
-              <Modal/>
-            )}
+            {success && <Modal />}
           </form>
         </div>
         <img

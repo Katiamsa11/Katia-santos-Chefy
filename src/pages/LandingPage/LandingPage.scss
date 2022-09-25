@@ -1,0 +1,421 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+
+.landing {
+    padding-top: 1rem;
+    overflow: hidden;
+
+    &__hero-section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        background-color: #030608;
+        height: 100vh;
+
+        @include desktop {
+        flex-direction: row;
+        align-items: center;
+        }
+    }
+
+    &__hero-text {
+        text-align: center;
+
+        @include desktop {
+        margin-top: 10rem;
+        }
+    }
+
+    &__hero-title {
+        color: $color-text-standard;
+        margin: 0 auto;
+        font-family: $yaseva;
+        font-size: 3rem;
+        padding-bottom: .5rem;
+
+        @include desktop {
+            padding-bottom: 1.5rem;
+            font-size: 5rem;
+        }
+    }
+
+    &__slogan {
+        color: $color-text-standard;
+        margin: 0 auto;
+        font-family: $yaseva;
+        animation: slidein 1s;
+        font-size: 1.25rem;
+
+        @include desktop {
+            margin-bottom: 2rem;
+        }
+    @include desktop {
+        font-size: 1.5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@keyframes slidein {
+    0% { margin-left:-200vw; }
+    100% { margin-left:0px; }
+}
+
+    &__hero-img {
+        width: 80%;
+        max-width: 20rem;
+
+        @include desktop {
+            height: auto;
+            width: 38vw;
+            max-width: 100rem;
+        }
+    }
+
+    &__hero-pan {
+
+        @include desktop {
+        align-self: flex-end;
+        }
+    }
+
+    &__pepper-container {
+        text-align: end;
+
+        @include desktop {
+            align-self: flex-start;
+        }
+    }
+
+    &__hero-pepper {
+
+        @include desktop {
+            margin-left: 0;
+        }
+    }
+
+    &__hero-link {
+        text-decoration: none;
+    }
+
+    &__hero-button {
+        border-radius: 10px;
+        width: calc(100vw - 1rem - 1rem);
+        transition: .5s background-color, .5s border;
+        background-color: $color-background-secondary;
+        border: 1px solid $color-background-secondary;
+        margin: 1rem auto 2rem auto;
+
+        @include tablet {
+            width: 12rem;
+            margin: 2rem auto 5rem auto;
+        }
+
+        @include desktop {
+        width: 9rem;
+        margin: auto;
+        margin-bottom: 12rem;
+        background-color: none;
+        border: 1px solid $color-text-standard;
+        background-color: #030608;
+        }
+
+        &:hover {
+            background-color: $color-background-secondary;
+            border: 1px solid $color-background-secondary;
+        }
+    }
+
+    &__button-title {
+        padding: .75rem 1rem;
+        color: $color-title-primary;
+        margin: 0;
+    }
+
+    &__hero-paragraph {
+        color: $color-title-primary;
+        align-self: flex-end;
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    &__section {
+        margin: 2rem 1rem 4rem 1rem;
+
+        @include tablet {
+            margin: 2rem 2.25rem 4rem 2.25rem;
+        }
+
+        @include desktop {
+            margin: 8rem calc((100vw - 69rem)/2);
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__steps-header {
+        color: $color-background-primary;
+        margin: 3rem 0 1rem 0;
+
+        @include tablet {
+            font-size: 2rem;
+            margin: 3rem 2.25rem 1rem 0;
+        }
+
+        @include desktop {
+            font-size: 3rem;
+            margin: 1rem 0;
+        }
+    }
+
+    &__steps-container {
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include desktop {
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+    }
+
+    &__box {
+        background-color: $color-text-standard;
+        border-radius: 15px;
+        width: calc(100vw - 1rem - 1rem);
+        margin: 2rem 0;
+        text-align: center;
+        padding: 1rem;
+
+        @include tablet {
+            margin: 1rem auto;
+            padding: 3rem;
+            width: 22rem;
+            height: 25rem;
+        }
+    }
+
+    &__icon {
+        height: 6rem;
+    }
+
+    &__subheader {
+        font-family: $roboto;
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 300;
+    }
+
+    &__steps-button {
+        background-color: $color-background-secondary;
+        color: $color-text-primary;
+        text-align: center;
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__photo-section {
+        display: none;
+
+        @include desktop {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(22, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        margin: 2rem calc((100vw - 1192px)/2);
+        }
+    }
+
+    &__photo {
+        border-radius: 15px;
+        width: calc(100vw - 1rem - 1rem);
+
+        @include desktop {
+            width: 16rem;
+            display: block;
+        }
+    }
+
+    &__photo1 {
+        @include desktop {
+            grid-column: 3/8;
+            grid-row: 1/5;
+            z-index: 1;
+        }
+    }
+
+    &__photo2 {
+        @include desktop {
+            grid-column: 6/10;
+            grid-row: 4/7;
+        }
+    }
+
+    &__photo3 {
+        @include desktop {
+            grid-column: 17/21;
+            grid-row: 4/9;
+            z-index: 1;
+        }
+    }
+
+    &__photo4 {
+        @include desktop {
+            width: 20rem;
+            grid-column: 13/19;
+            grid-row: 3/6;
+            
+        }
+    }
+
+    &__photo5 {
+        @include desktop {
+            grid-column: 12/16;
+            grid-row: 7/12;
+        }
+    }
+
+    &__photo6 {
+        @include desktop {
+            grid-column: 8/13;
+            grid-row: 9/12;
+            width: 18rem;
+            z-index: -1;
+        }
+    }
+}
+
+.intro {
+
+    @include desktop {
+    margin: 8rem  calc((100vw - 35rem - 30rem - 4rem) / 2);
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    &__text {
+        margin: 1rem;
+
+        @include tablet {
+            margin: 1rem 2.25rem;
+        }
+
+        @include desktop {
+            width: 30rem;
+            margin: 0 4rem 0 0;
+        }
+    }
+
+    &__heading {
+        color: $color-background-primary;
+
+        @include tablet {
+            font-size: 2rem;
+        }
+
+        @include desktop {
+            font-size: 4rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    &__img {
+        width: calc(100vw - 1rem - 1rem);
+        margin: 0 1rem;
+        border-radius: 15px;
+
+        @include tablet {
+            margin: 0 2.25rem;
+            width: calc(100vw - 2.25rem - 2.25rem);
+        }
+
+        @include desktop {
+            margin: 0;
+            width: 35rem;
+        }
+    }
+}
+
+.me {
+
+    @include tablet {
+        margin: 0 auto;
+    }
+
+    @include desktop {
+    margin: 0  calc((100vw - 35rem - 30rem - 4rem) / 2);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding-top: 0;
+    }
+
+    &__header {
+        color: $color-background-primary;
+
+        @include tablet {
+            font-size: 2rem;
+        }
+
+        @include desktop {
+            font-size: 3rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__img {
+        width: calc(100vw - 1rem - 1rem);
+        margin: 0 1rem;
+        object-fit: cover;
+        border-radius: 15px;
+
+        @include tablet {
+            width: 22rem;
+            height: 22rem;
+            margin: 0 calc((100vw - 22rem)/2);
+        }
+
+        @include desktop {
+            margin: 0;
+        }
+    }
+
+    &__text {
+        margin: 1rem;
+
+        @include tablet {
+            margin: 0 2.25rem;
+        }
+
+        @include desktop {
+            width: 40rem;
+        }
+    }
+
+    &__signature-container {
+        display: flex;
+    }
+
+    &__signature {
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    &__logo {
+        font-family: $yaseva;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-left: .3rem;
+    }
+}
