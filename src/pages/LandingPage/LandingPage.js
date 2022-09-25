@@ -21,7 +21,7 @@ import AOS from "aos";
 
 function LandingPage() {
   //function to change tab title dinamically
-  TabTitle("Landing Page");
+  TabTitle("About");
 
   AOS.init();
 

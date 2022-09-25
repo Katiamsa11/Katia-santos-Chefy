@@ -1,66 +1,31 @@
 import React from "react";
 import "../Header/HeaderPage.scss";
- import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import homeIcon from "../../assets/icons/house-solid.svg";
+import aboutIcon from "../../assets/icons/circle-info-solid.svg";
+import accountIcon from "../../assets/icons/user-solid.svg";
 
 function HeaderPage() {
-  return(
-  <header className="header">
-  <div className="header__menu">
-    <input id="menu__toggle" type="checkbox" />
-    <label className="menu__btn" for="menu__toggle">
-      <span></span>
-    </label>
-    <ul className="menu__box">
-      <NavLink to="/home" className="menu__item" activeClassName="active-link">
-        Home
-      </NavLink>
-      <NavLink
-        to="/profile"
-        className="menu__item"
-        activeClassName="active-link"
-      >
-        Profile
-      </NavLink>
-      <NavLink
-      to="/"
-      className="menu__item"
-      activeClassName="active-link"
-    >
-      About
+  return (
+    <div className="header">
+    <NavLink to="/" className="header__link header__logo-link">
+        <h2 className="header__logo">chefy.</h2>
     </NavLink>
-    </ul>
-  </div>
-  <nav className="header__nav">
-    <ul className="header__list">
-      <li className="header__list">
-        <NavLink to="/home" className="header__link" activeClassName="active">
-          Home
+    <div className="header__container">
+        <NavLink to="/" className="header__link">
+            <img className="header__icon" src={homeIcon} alt="home icon" />
+            <p className="header__title">home</p>
         </NavLink>
-      </li>
-      <li className="header__list">
-        <NavLink
-          to="/profile"
-          className="header__link"
-          activeClassName="active"
-        >
-          Profile
+        <NavLink to="/landing" className="header__link">
+            <img className="header__icon" src={aboutIcon} alt="information icon" />
+            <p className="header__title">about</p>
         </NavLink>
-      </li>
-      <li className="header__list">
-        <NavLink
-          to="/"
-          className="header__link"
-          activeClassName="active"
-        >
-          About
+        <NavLink to="/profile" className="header__link">
+            <img className="header__icon" src={accountIcon} alt="user icon" />
+            <p className="header__title">account</p>
         </NavLink>
-      </li>
-    </ul>
-  </nav>
-  <Link className="header__link-logo" to="/">
-    <h2 className="header__logo">chefy.</h2>
-  </Link>
-</header>
-);
+    </div>
+</div>
+  );
 }
 export default HeaderPage;

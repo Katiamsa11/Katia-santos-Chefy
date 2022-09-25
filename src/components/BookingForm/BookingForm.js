@@ -189,7 +189,7 @@ function BookingForm() {
           <form className="booking__form" onSubmit={handleSubmit}>
             <div className="booking__group">
               <input
-              id="name"
+                id="name"
                 type="text"
                 placeholder=""
                 className="booking__input"
@@ -210,6 +210,7 @@ function BookingForm() {
             </div>
             <div className="booking__group">
               <input
+                id="phone"
                 className="booking__input"
                 value={text.recipient}
                 onChange={(e) =>
@@ -220,6 +221,7 @@ function BookingForm() {
             </div>
             <div className="booking__group">
               <input
+                id="eventName"
                 type="text"
                 placeholder=""
                 className="booking__input"
@@ -242,6 +244,7 @@ function BookingForm() {
               <input
                 onChange={handleChangeAddress}
                 value={eventAddress}
+                id="eventAddress"
                 type="text"
                 placeholder=""
                 className="booking__input"
@@ -263,6 +266,7 @@ function BookingForm() {
                 onChange={handleChangeDate}
                 value={eventDate}
                 type="date"
+                id="eventDate"
                 className="booking__input"
               />
               <label className="booking__label">Event Date</label>
@@ -279,11 +283,11 @@ function BookingForm() {
             </div>
             <div className="booking__group">
               <select
-                id="event"
-                name="event"
+                id="price"
+                name="price"
                 onChange={handleChangePrice}
                 value={price}
-                type="text"
+                type="select"
                 className="booking__input"
               >
                 <option value=""></option>
@@ -306,6 +310,7 @@ function BookingForm() {
             </div>
             <div className="booking__group">
               <input
+                id="guests"
                 type="number"
                 min="2"
                 max="10"
@@ -328,6 +333,7 @@ function BookingForm() {
             </div>
             <div className="booking__group">
               <textarea
+                id="allergies"
                 name="allergies"
                 placeholder=""
                 className="booking__input"
@@ -348,7 +354,8 @@ function BookingForm() {
             </div>
             <div className="booking__group">
               <textarea
-                name="Event"
+                id="details"
+                name="details"
                 placeholder=""
                 className="booking__input"
                 onChange={handleChangeDetails}

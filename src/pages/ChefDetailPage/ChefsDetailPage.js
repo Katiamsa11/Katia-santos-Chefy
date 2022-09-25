@@ -15,7 +15,7 @@ import LoadingPage from "../../components/Loading/Loading";
 
 function ChefsDetailPage() {
   //function to change tab title dinamically
-  TabTitle("Chef Bio");
+  TabTitle("Chef Profile");
   //Set State
   const [selectedChef, setSelectedChef] = useState([]);
   const [selectedImage, setSelectedImage] = useState([]);

@@ -8,7 +8,7 @@ import "../ChefsPage/ChefsPage.scss";
 
 function ChefsPage() {
   //function to change tab title dinamically
-  TabTitle("Chefs Home Page");
+  TabTitle("Home");
 
   const [allChefs, setAllChefs] = useState([]);
   const [isError, setIsError] = useState(false);
