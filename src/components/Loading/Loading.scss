@@ -1,0 +1,49 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 50vw;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+
+&__container {
+  border: 1rem solid $color-background-primary;
+  border-radius: 50%;
+  border-top: 1rem solid $color-cta-hover;
+  border-bottom: 1rem solid $color-cta-hover;
+  width: 5rem;
+  height: 5rem;
+  animation: spin 2s linear infinite;
+
+  @include tablet {
+    width: 11.25rem;
+    height: 11.25rem;
+
+  }
+}
+
+&__text {
+  color: $color-text-primary;
+  padding-left: 2rem;
+  font-size: .75rem;
+
+  @include tablet {
+  font-size: 2rem;
+  }
+}
+}
+

@@ -1,18 +1,17 @@
 import React from "react";
 import { deleteBookings, fetchBookings } from "../../utils/Utils";
 import { useState, useEffect } from "react";
+import LoadingPage from "../Loading/Loading";
 import "../../components/Profile/Profile.scss";
 
 function Profile() {
   const [allBookings, setAllBookings] = useState([]);
   const [isError, setIsError] = useState(false);
-  const [success, setSuccess] = useState("");
   //get bookings
   useEffect(() => {
     fetchBookings()
       .then((response) => {
         setAllBookings(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -21,7 +20,7 @@ function Profile() {
   }, []);
 
   if (!allBookings) {
-    return <h2>Loading Chefs....</h2>;
+    return <LoadingPage />;
   }
 
   if (isError) {
@@ -39,7 +38,7 @@ function Profile() {
   const handleDelete = (id) => {
     deleteBookings(id)
       .then((response) => {
-        setSuccess(response.data);
+        console.log(response.data);
         getData();
       })
       .catch((error) => {

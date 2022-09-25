@@ -11,6 +11,7 @@ import {
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import userIcon from "../../assets/icons/user.svg";
+import LoadingPage from "../../components/Loading/Loading";
 
 function ChefsDetailPage() {
   //function to change tab title dinamically
@@ -24,26 +25,24 @@ function ChefsDetailPage() {
   useEffect(() => {
     fetchChefsById(id).then((response) => {
       setSelectedChef(response.data[0]);
-      console.log(response.data);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }, [id]);
 
   useEffect(() => {
     fetchImagesById(id).then((response) => {
       setSelectedImage(response.data);
-      console.log(response.data);
     });
   }, [id]);
 
   useEffect(() => {
     fetchReviewsById(id).then((response) => {
       setSelectedReview(response.data);
-      console.log(response.data);
     });
   }, [id]);
 
-  if (!selectedChef) {
-    return <p>Loading...</p>;
+  if (!selectedChef || !selectedImage || !selectedReview) {
+    return <LoadingPage />;
   }
 
   return (
@@ -72,6 +71,7 @@ function ChefsDetailPage() {
               {selectedImage.map((image) => {
                 return (
                   <img
+                    key={image.id}
                     className="bio__images"
                     src={image.images}
                     alt="plating images of food"
@@ -108,7 +108,7 @@ function ChefsDetailPage() {
             {selectedReview.map((review) => {
               return (
                 <>
-                  <div className="bio__review-card">
+                  <div className="bio__review-card" key={review.id}>
                     <div className="bio__review-info">
                       <div className="bio__icon-reviewer">
                         <img

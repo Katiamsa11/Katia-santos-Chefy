@@ -3,6 +3,7 @@ import { fetchChefs, TabTitle } from "../../utils/Utils";
 import { useState, useEffect } from "react";
 import MainPage from "../../components/MainPage/MainPage";
 import SearchInput from "../../components/SearchInput/SearchInput";
+import LoadingPage from "../../components/Loading/Loading"
 import "../ChefsPage/ChefsPage.scss";
 
 function ChefsPage() {
@@ -19,6 +20,7 @@ function ChefsPage() {
     fetchChefs()
       .then((response) => {
         setAllChefs(response.data);
+        window.scrollTo({ top: 0, behavior: "smooth" });
       })
       .catch((error) => {
         console.log(error);
@@ -27,7 +29,7 @@ function ChefsPage() {
   }, []);
 
   if (!allChefs) {
-    return <h2>Loading Chefs....</h2>;
+    return <LoadingPage />;
   }
 
   if (isError) {
