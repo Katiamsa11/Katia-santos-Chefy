@@ -28,11 +28,15 @@ function LandingPage() {
   return (
     <div className="landing">
       <section className="landing__hero-section">
-        <img className="landing__hero-img landing__hero-pan" src={pan} alt="chef sauteing"/>
+        <img
+          className="landing__hero-img landing__hero-pan"
+          src={pan}
+          alt="chef sauteing"
+        />
         <div className="landing__hero-text">
           <h1 className="landing__hero-title">chefy.</h1>
           <h2 className="landing__slogan">chefs delivered</h2>
-          <Link to="/" className="landing__hero-link">
+          <Link to="/home" className="landing__hero-link">
             <div className="landing__hero-button">
               <h4 className="landing__button-title">Get Started</h4>
             </div>
@@ -41,7 +45,11 @@ function LandingPage() {
           <p className="landing__hero-paragraph">↓</p>
         </div>
         <div className="landing__pepper-container">
-          <img className="landing__hero-img landing__hero-pepper" src={pepper} alt="chef seasoning" />
+          <img
+            className="landing__hero-img landing__hero-pepper"
+            src={pepper}
+            alt="chef seasoning"
+          />
         </div>
       </section>
       <section data-aos="fade-up" className="intro">
@@ -109,7 +117,9 @@ function LandingPage() {
             <div className="landing__text-box">
               <h3 className="landing__subheader">select a chef</h3>
               <p className="landing__description">
-                Explore different chefs to learn more about their specialties and experience. Filter through chefs in your city to find the perfect match for your event. 
+                Explore different chefs to learn more about their specialties
+                and experience. Filter through chefs in your city to find the
+                perfect match for your event.
               </p>
             </div>
           </div>
@@ -126,7 +136,9 @@ function LandingPage() {
             <div className="landing__text-box">
               <h3 className="landing__subheader">submit your preferences</h3>
               <p className="landing__description">
-                Once you have selected a chef - tell them more about your event including number of guests, dietary restrictions and special instructions.
+                Once you have selected a chef - tell them more about your event
+                including number of guests, dietary restrictions and special
+                instructions.
               </p>
             </div>
           </div>
@@ -135,12 +147,14 @@ function LandingPage() {
             <div className="landing__text-box">
               <h3 className="landing__subheader">bon appétit</h3>
               <p className="landing__description">
-                The chef you selected will come to your home with all necessary ingredients and cook a delicious meal for you and your guests to enjoy.
+                The chef you selected will come to your home with all necessary
+                ingredients and cook a delicious meal for you and your guests to
+                enjoy.
               </p>
             </div>
           </div>
         </div>
-        <Link to="/" className="landing__hero-link landing__steps-link">
+        <Link to="/home" className="landing__hero-link landing__steps-link">
           <div className="landing__hero-button landing__steps-button">
             <h4 className="landing__button-title landing__steps-link">
               Get Started
@@ -174,7 +188,6 @@ function LandingPage() {
             <p className="me__signature">Katia Santos, Founder</p>
             <p className="me__logo">chefy.</p>
           </div>
-
         </div>
       </section>
     </div>
