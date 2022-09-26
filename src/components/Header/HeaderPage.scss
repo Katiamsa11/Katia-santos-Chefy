@@ -25,10 +25,9 @@
         text-decoration: none;
         color: rgb(127, 125, 125);
         text-align: center;
-        filter: invert(53%) sepia(4%) saturate(137%) hue-rotate(22deg) brightness(93%) contrast(87%);
+        filter: contrast(0);
 
         &:hover {
-            color: black;
             filter: invert(76%) sepia(33%) saturate(5259%) hue-rotate(338deg) brightness(94%) contrast(86%);
         }
 
@@ -72,6 +71,7 @@
     &__title {
         margin: 0;
         line-height: 1rem;
+        list-style: none;
     }
 }
 //decorate the active class name link 
@@ -81,3 +81,25 @@
             filter: invert(76%) sepia(33%) saturate(5259%) hue-rotate(338deg) brightness(94%) contrast(86%);
 
 }
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 10rem;
+    z-index: 1;
+    background-color: black;
+    border-radius: .5rem;
+  }
+  
+  .dropdown-content p {
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

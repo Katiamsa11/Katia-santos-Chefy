@@ -80,7 +80,7 @@ function Profile() {
                   </div>
                   <div className="profile__text-container">
                     Estimated Price To Pay:
-                    <p className="profile__item">${booking.price}</p>
+                    <p className="profile__item">{booking.price}</p>
                   </div>
                   <div className="profile__text-container">
                     Amount of Guests:

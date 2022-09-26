@@ -107,8 +107,8 @@ function ChefsDetailPage() {
           <div className="bio__reviews-container">
             {selectedReview.map((review) => {
               return (
-                <>
-                  <div className="bio__review-card" key={review.id}>
+                <div key={review.id} >
+                  <div className="bio__review-card" >
                     <div className="bio__review-info">
                       <div className="bio__icon-reviewer">
                         <img
@@ -128,7 +128,7 @@ function ChefsDetailPage() {
                     </div>
                     <p className="bio__">{review.description}</p>
                   </div>
-                </>
+                </div>
               );
             })}
           </div>
