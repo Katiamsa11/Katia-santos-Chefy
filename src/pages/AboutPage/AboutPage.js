@@ -1,5 +1,5 @@
 import React from "react";
-import "../LandingPage/LandingPage.scss";
+import "../AboutPage/AboutPage.scss";
 import { TabTitle } from "../../utils/Utils";
 import pan from "../../assets/images/pan.png";
 import pepper from "../../assets/images/pepper.png";
@@ -19,7 +19,7 @@ import katia from "../../assets/images/katia.jpeg";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
-function LandingPage() {
+function AboutPage() {
   //function to change tab title dinamically
   TabTitle("About");
 
@@ -194,4 +194,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default AboutPage;

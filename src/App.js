@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderPage from "./components/Header/HeaderPage";
 import FooterPage from "./components/Footer/FooterPage";
-import LandingPage from "./pages/LandingPage/LandingPage";
-import ChefsPage from "./pages/ChefsPage/ChefsPage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import HomePage from "./pages/HomePage/HomePage";
 import ChefsDetailsPage from "./pages/ChefDetailPage/ChefsDetailPage";
 import BookingFormPage from "./pages/BookingPage";
 import ProfilePage from "./pages/ProfilePage";
@@ -14,8 +14,8 @@ function App() {
     <BrowserRouter>
       <HeaderPage />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<ChefsPage />} />
+        <Route path="/" element={<AboutPage />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/chefs/:id" element={<ChefsDetailsPage />} />
         <Route path="/booking" element={<BookingFormPage />} />
         <Route path="/profile" element={<ProfilePage />} />

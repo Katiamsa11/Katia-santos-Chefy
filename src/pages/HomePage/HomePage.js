@@ -3,10 +3,10 @@ import { fetchChefs, TabTitle } from "../../utils/Utils";
 import { useState, useEffect } from "react";
 import MainPage from "../../components/MainPage/MainPage";
 import SearchInput from "../../components/SearchInput/SearchInput";
-import LoadingPage from "../../components/Loading/Loading"
-import "../ChefsPage/ChefsPage.scss";
+import LoadingPage from "../../components/Loading/Loading";
+import "./HomePage.scss";
 
-function ChefsPage() {
+function HomePage() {
   //function to change tab title dinamically
   TabTitle("Home");
 
@@ -72,4 +72,4 @@ function ChefsPage() {
   );
 }
 
-export default ChefsPage;
+export default HomePage;
