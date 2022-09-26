@@ -106,15 +106,6 @@ function BookingForm() {
     setDetails(event.target.value);
   };
 
-  // used RegExp to validate the phone number
-  // function validatePhoneNumber(input_str) {
-  //   const re = /^\+?[0-9]?[- ]?\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-
-  //   return re.test(input_str);
-  // }
-
-  // const validPhone = validatePhoneNumber();
-
   //created new warehouse object to send back to the backend
   const newBooking = {
     fullName: name,

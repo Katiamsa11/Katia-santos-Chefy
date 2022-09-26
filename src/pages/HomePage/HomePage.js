@@ -14,7 +14,7 @@ function HomePage() {
   const [isError, setIsError] = useState(false);
   const [filterChefs, setFilterChefs] = useState("all");
   //Set state to change the title dinamically depending on the location
-  const [title, setTitle] = useState("Feautured");
+  const [title, setTitle] = useState("Featured");
 
   useEffect(() => {
     fetchChefs()
@@ -28,7 +28,7 @@ function HomePage() {
       });
   }, []);
 
-  if (!allChefs) {
+  if (allChefs.length === 0) {
     return <LoadingPage />;
   }
 

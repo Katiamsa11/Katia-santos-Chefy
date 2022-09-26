@@ -41,7 +41,11 @@ function ChefsDetailPage() {
     });
   }, [id]);
 
-  if (!selectedChef || !selectedImage || !selectedReview) {
+  if (
+    selectedChef.length === 0 ||
+    selectedImage.length === 0 ||
+    selectedReview.length === 0
+  ) {
     return <LoadingPage />;
   }
 
@@ -107,8 +111,8 @@ function ChefsDetailPage() {
           <div className="bio__reviews-container">
             {selectedReview.map((review) => {
               return (
-                <div key={review.id} >
-                  <div className="bio__review-card" >
+                <div key={review.id}>
+                  <div className="bio__review-card">
                     <div className="bio__review-info">
                       <div className="bio__icon-reviewer">
                         <img
