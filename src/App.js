@@ -19,7 +19,7 @@ function App() {
         <Route path="/chefs/:id" element={<ChefsDetailsPage />} />
         <Route path="/booking" element={<BookingFormPage />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       <FooterPage />
     </BrowserRouter>
