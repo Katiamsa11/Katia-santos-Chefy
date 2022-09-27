@@ -23,22 +23,34 @@ function ChefsDetailPage() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetchChefsById(id).then((response) => {
-      setSelectedChef(response.data[0]);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    fetchChefsById(id)
+      .then((response) => {
+        setSelectedChef(response.data[0]);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [id]);
 
   useEffect(() => {
-    fetchImagesById(id).then((response) => {
-      setSelectedImage(response.data);
-    });
+    fetchImagesById(id)
+      .then((response) => {
+        setSelectedImage(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [id]);
 
   useEffect(() => {
-    fetchReviewsById(id).then((response) => {
-      setSelectedReview(response.data);
-    });
+    fetchReviewsById(id)
+      .then((response) => {
+        setSelectedReview(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [id]);
 
   if (
@@ -167,8 +179,8 @@ function ChefsDetailPage() {
             </div>
           </Link>
         </div>
+        </div>
       </div>
-    </div>
   );
 }
 

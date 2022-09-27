@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import MainPage from "../../components/MainPage/MainPage";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import LoadingPage from "../../components/Loading/Loading";
-import "./HomePage.scss";
+import "./GetStartedPage.scss";
 
-function HomePage() {
+function GetStartedPage() {
   //function to change tab title dinamically
-  TabTitle("Home");
+  TabTitle("Get started");
 
   const [allChefs, setAllChefs] = useState([]);
   const [isError, setIsError] = useState(false);
@@ -72,4 +72,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default GetStartedPage;

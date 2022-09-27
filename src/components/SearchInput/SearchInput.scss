@@ -8,8 +8,16 @@
 
   &__heading {
       margin: auto;
-      padding: 5rem 1rem 0 1rem;
+      padding: 6rem 1rem 0 1rem;
       color: $color-title-primary;
+
+      @include tablet {
+        padding: 6rem 2.25rem 0 2.25rem;
+      }
+
+      @include desktop {
+        width: 60rem;
+      }
   }
   
   &__select {

@@ -6,6 +6,14 @@
   width: 100%;
   padding: 1rem 1.25rem;
 
+  @include tablet {
+    padding: 1rem 2.25rem;
+  }
+
+  @include desktop {
+    padding: 1rem calc((100vw - 69rem)/2);
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -22,7 +30,7 @@
   }
   
   &__icon {
-    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   &__copyright {

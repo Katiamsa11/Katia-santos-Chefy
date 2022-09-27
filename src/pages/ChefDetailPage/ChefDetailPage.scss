@@ -270,7 +270,7 @@
     &__booking {
         border-top: 1px solid $color-cta-primary;
         position: fixed;
-        bottom: 0;
+        bottom:0;
         left: 0;
         width: 100vw;
         background-color: white;
@@ -282,7 +282,7 @@
             flex-direction: column;
             justify-content: center;
             bottom: auto;
-            top: 25rem;
+            bottom: 25rem;
             left: auto;
             right:  calc((100vw - 74rem) / 2);
             width: 32rem;
@@ -293,6 +293,7 @@
         }
     }
 
+  
     &__book-heading-hidden {
         display: none;
         

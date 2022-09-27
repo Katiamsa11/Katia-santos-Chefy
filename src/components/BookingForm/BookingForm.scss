@@ -18,15 +18,15 @@
 
   &__wrapper {
     background-color: $color-title-primary;
+    margin: 1rem auto 0 auto;
 
     @include desktop {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 71rem;
-      height: 100%;
       border-radius: 15px;
-      margin: 1rem auto 0 auto;
+      margin: 3rem auto 0 auto;
       padding: 0;
     }
   }
@@ -51,10 +51,7 @@
     }
   }
   
-  &__group {
-    position: relative;
-    z-index: 0;
-  }
+
   
   &__input {
     padding: 10px;
@@ -63,36 +60,32 @@
     outline: none;
     color: $color-text-primary;
     border: 2px solid $color-background-secondary;
+    width: 100%;
+    font-family: $roboto;
+  }
+
+  &__text-area {
+    padding: 10px;
+    background: $color-title-primary;
+    border-radius: 10px;
+    outline: none;
+    color: $color-text-primary;
+    border: 2px solid $color-background-secondary;
     resize: none;
     width: 100%;
-    margin-bottom: 1rem;
-    transition: all .3s linear;
+    height: 5rem;
     font-family: $roboto;
-
-    &--error {
-      border: 2px solid red;
   }
-
-  }
-
 
 
   &__label {
-    position: absolute;
-    top: 10px;
-    left: 8px;
     font-size: 14px;
     padding: 0px 5px;
-    color:$color-text-primary;
-    transition: 0.3s;
-    pointer-events: none;
+    color: $color-text-primary;
+    font-family: 600;
+    margin-top: 1rem;
+    display: block;
   }
-  &__input:focus + &__label, &__input:not(:placeholder-shown) + .placeholder{
-    top:-10px;
-    background-color: $color-title-primary;
-    color:$color-background-secondary;
-  }
-
 
   &__img {
     width: 100%;
@@ -101,11 +94,12 @@
     object-position: 50% 15%;
 
     @include desktop {
-      height: 43rem;
+      height: 55rem;
       width: 35rem;
       object-fit: cover;
       object-position: top;
       border-radius: 0 15px 15px 0;
+      overflow: hidden;
     }
   }
 
@@ -116,7 +110,7 @@
     border: none;
     color: $color-title-primary;
     padding: .25rem 1rem;
-    margin: 0 0 1rem 0;
+    margin: 1rem 0 1rem 0;
     width: 100%;
     height: 2.4688rem;
     text-transform: uppercase;
@@ -125,11 +119,12 @@
       width: 30%;
       margin: 0 calc((100vw - 30% - 2.25rem - 2.25rem) / 2);
       margin-bottom: 2rem;
+      margin-top: 1rem;
     }
 
     @include desktop {
       width: 8rem;
-      margin: 0 11rem;
+      margin: 1rem 11rem 1rem 11rem;
     }
 
     &:hover{
@@ -140,33 +135,14 @@
 &__error {
     color: red;
     font-size: 0.75rem;
-    line-height: 1rem;
     font-weight: 400;
-    flex-basis: 100%;
-    justify-self: flex-end;
-    text-align: end;
+    text-align: start;
     font-style: italic;
     margin: 0;
+    display: flex;
   }
- 
 }
-// code to remove date default placeholder 
-input[type=date]::-webkit-datetime-edit-text {
-  -webkit-appearance: none;
-  display: none;
-  } input[type=date]::-webkit-datetime-edit-month-field{
-  -webkit-appearance: none;
-  display: none;
-  } input[type=date]::-webkit-datetime-edit-day-field {
-  -webkit-appearance: none;
-  display: none;
-  } input[type=date]::-webkit-datetime-edit-year-field {
-  -webkit-appearance: none;
-  display: none;
-  }
 
-
-  //floating labels 
 
   
   

@@ -3,65 +3,84 @@
 
 
 .profile {
-  padding: 0 1.5rem;
  
   
   &__wrapper {
     padding-bottom: 1rem;
     display: flex;
     align-items: center;
+    background-color: $color-background-primary;
   
     @include tablet {
-      padding-bottom: 6rem;
+      padding-bottom: 2rem;
+    }
+  }
 
+  &__top {
+    text-align: center;
+    margin-left: 1rem;
+
+    @include tablet {
+      margin-left: 2.25rem;
+    }
+
+    @include desktop {
+      margin-left: calc((100vw - 69rem)/2);
+    }
+  }
+
+  &__icon {
+    height: 6rem;
+    width: 6rem;
+    margin-top: 5.5rem;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(263deg) brightness(103%) contrast(109%);
+
+    @include tablet {
+      margin-top: 6.5rem;
+      height: 15rem;
+      width: 15rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 0;
+    padding-top: .5rem;
+    color: $color-title-primary;
+
+    @include tablet {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
     }
   }
 
   &__title {
     font-size: 1.5rem;
     padding-left: 1rem;
-    color: $color-text-primary;
+    margin-top: 4rem;
+    color: $color-title-primary;
 
     @include tablet {
+      padding-left: 2.25rem;
       font-size: 3rem;
     }
   }
 
-  &__icon {
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-    height: 6rem;
-    width: 6rem;
-    background-image: url(../../assets/icons/user.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-top: 5rem;
-
-    @include tablet {
-      height: 15rem;
-    width: 15rem;
-    }
-  }
-
-  &__subtitle {
-    font-size: 0.75rem;
-    @include tablet {
-    font-size: 1rem;
-    text-align: center;
-    color: $color-text-primary;
-    }
-  }
-
   &__cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    margin: 0 1rem;
 
     @include tablet {
-    border-bottom: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+      margin: 2rem 2.25rem 0 2.25rem;
+      display: flex;
+      border-bottom: none;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    @include desktop {
+      margin: 2rem calc((100vw - 69rem)/2);
     }
   }
 
@@ -78,21 +97,28 @@
 
   &__flex-card {
     width: 100%;
-    border-top: 1px solid $color-text-primary;
+    border-bottom: 1px solid $color-text-primary;
     padding-bottom: 1rem;
 
     @include tablet {
-    border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-    background-color:$color-background-neutral;
-    width: 40rem;
-    padding: 2rem;
+      border: 1px solid rgba(0, 0, 0, 0.034);
+      border-radius: 15px;   
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      width: 22rem;
+      padding: 1.5rem;
+      margin-right: 1rem;
     }
   }
 
   &__title-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
+
+    @include tablet {
+      margin: 0 0 1rem 0;
+    }
   }
 
   &__description {
@@ -104,40 +130,50 @@
   &__logo {
     font-size: 1rem;
     color: $color-text-primary;
-    margin-right: 2rem;
+    margin: 0;
+    font-family: $yaseva;
+
     @include tablet {
-    font-size: 2rem;
+      font-size: 2rem;
     }
   }
 
   &__event-name {
     color: $color-text-primary;
+    font-size: 1rem;
+    margin: 0;
+
     @include tablet {
     font-size: 1.5rem;
     padding-right: .5rem;
-    padding-left: 5rem;
-   
+    }
+
+    @include desktop {
+      padding-right: 1rem;
     }
   }
 
   &__text-container {
     display: flex;
     align-items: center;
-    font-size: .75rem;
+    font-size: .85rem;
     font-weight: 600;
     color: $color-background-primary;
+    
     @include tablet {
       font-size: 1rem;
     }
   }
 
   &__item {
-    font-size: .75rem;
+    font-size: .8rem;
+    margin: 0;
     color:$color-text-primary;
-    padding-left: .2rem;
+    padding: .25rem 0 .25rem .5rem;
+
     @include tablet {
-    font-size: 1rem;
-    padding-left: .5rem;
+      font-size: 1rem;
+      padding-left: .5rem;
     }
 
   }
@@ -155,10 +191,11 @@
 
     @include tablet {
       font-size: 1rem;
+      width: 12rem;
+      margin: 1rem 0 0 calc((100% - 12rem)/2);
     }
   }
   }
-
 
 
 
