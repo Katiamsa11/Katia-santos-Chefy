@@ -13,7 +13,8 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 50vw;
+  height: 100vh;
+  margin: 0 auto;
 
   @include tablet {
     flex-direction: row;
@@ -25,8 +26,8 @@
   border-radius: 50%;
   border-top: 1rem solid $color-cta-hover;
   border-bottom: 1rem solid $color-cta-hover;
-  width: 5rem;
-  height: 5rem;
+  width: 8rem;
+  height: 8rem;
   animation: spin 2s linear infinite;
 
   @include tablet {

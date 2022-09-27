@@ -1,7 +1,6 @@
 import React from "react";
 import "../SearchInput/SearchInput.scss";
 
-
 function SearchInput({ filterValueSelected }) {
   const onFilterValueChanged = (event) => {
     filterValueSelected(event.target.value);

@@ -29,6 +29,7 @@
       border: solid 2px $color-text-standard;
       border-radius: 10px;
       cursor: pointer;
+      text-align: center;
 
       @include tablet {
         padding: .5rem 4rem;

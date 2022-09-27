@@ -29,7 +29,7 @@ www.chefsdelivered.ca
 
 ### Front-End
 
-React-app & Sass(flex-box & grid)
+React-app & Sass
 
 Git & GitHub
 

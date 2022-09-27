@@ -97,6 +97,7 @@ function ChefsDetailPage() {
             </div>
           </div>
           <section className="bio__booking-section">
+          <div className="bio__sticky-section">
             <h4 className="bio__booking-header">Book Now</h4>
             <div className="bio__booking-container">
               <Link to="/booking" className="bio__booking-link">
@@ -117,6 +118,7 @@ function ChefsDetailPage() {
                   <p className="bio__booking-price">$220 - $320 per person</p>
                 </div>
               </Link>
+            </div>
             </div>
           </section>
           <h4 className="bio__review-header">Reviews</h4>

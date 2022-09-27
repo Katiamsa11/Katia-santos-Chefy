@@ -159,6 +159,18 @@ function BookingForm() {
     if (!details) {
       setDetailError(true);
     }
+    if (
+      !name ||
+      !eventAddress ||
+      !eventName ||
+      !eventDate ||
+      !guests ||
+      !price ||
+      !allergies ||
+      !details
+    ) {
+      return;
+    }
 
     axios
       .post(API_URL + "/events", newBooking)
@@ -169,6 +181,7 @@ function BookingForm() {
       .catch((error) => {
         console.log(error);
       });
+
     resetForm();
   };
 
@@ -218,129 +231,105 @@ function BookingForm() {
               </p>
             )}
             <label className="booking__label">Event Address</label>
-              <input
-                onChange={handleChangeAddress}
-                value={eventAddress}
-                id="eventAddress"
-                type="text"
-                placeholder="Event Address"
-                className="booking__input"
-              />
-              {addressError && (
-                <p className="booking__error">
-                  <img
-                    src={errorImg}
-                    alt="error icon"
-                    className="error__icon"
-                  />
-                  Event address is required
-                </p>
-              )}
-              <label className="booking__label">Event Date</label>
-              <input
-                onChange={handleChangeDate}
-                placeholder="Event Date"
-                value={eventDate}
-                type="date"
-                id="eventDate"
-                className="booking__input"
-              />
-              {dateError && (
-                <p className="booking__error">
-                  <img
-                    src={errorImg}
-                    alt="error icon"
-                    className="error__icon"
-                  />
-                  Event Date is required
-                </p>
-              )}
-              <label className="booking__label">Choose the experience</label>
-              <select
-                id="price"
-                name="price"
-                onChange={handleChangePrice}
-                value={price}
-                type="select"
-                className="booking__input"
-                placeholder="Choose the experience"
-              >
-                <option value=""></option>
-                <option value="Basic $90-$120">Basic $90-$120</option>
-                <option value="Premium $120-$180">Premium $120-$180</option>
-                <option value="High End $180-$220">High-End $180-$220</option>
-              </select>
-              {priceError && (
-                <p className="booking__error">
-                  <img
-                    src={errorImg}
-                    alt="error icon"
-                    className="error__icon"
-                  />
-                  This field is required!
-                </p>
-              )}
-              <label className="booking__label">Number Of Guests</label>
-              <input
-                id="guests"
-                type="number"
-                min="2"
-                max="10"
-                placeholder="Number of Guests"
-                className="booking__input"
-                onChange={handleChangeGuests}
-                value={guests}
-              />
-              {guestError && (
-                <p className="booking__error">
-                  <img
-                    src={errorImg}
-                    alt="error icon"
-                    className="error__icon"
-                  />
-                  This field is required!
-                </p>
-              )}
-              <label className="booking__label">Dietary restrictions</label>
-              <textarea
-                id="allergies"
-                name="allergies"
-                placeholder="Dietary Restrictions"
-                className="booking__text-area"
-                onChange={handleChangeAllergies}
-                value={allergies}
-              ></textarea>
-              {allergiesError && (
-                <p className="booking__error">
-                  <img
-                    src={errorImg}
-                    alt="error icon"
-                    className="error__icon"
-                  />
-                  This field is required!
-                </p>
-              )}
-              <label className="booking__label">
+            <input
+              onChange={handleChangeAddress}
+              value={eventAddress}
+              id="eventAddress"
+              type="text"
+              placeholder="Event Address"
+              className="booking__input"
+            />
+            {addressError && (
+              <p className="booking__error">
+                <img src={errorImg} alt="error icon" className="error__icon" />
+                Event address is required
+              </p>
+            )}
+            <label className="booking__label">Event Date</label>
+            <input
+              onChange={handleChangeDate}
+              placeholder="Event Date"
+              value={eventDate}
+              type="date"
+              id="eventDate"
+              className="booking__input"
+            />
+            {dateError && (
+              <p className="booking__error">
+                <img src={errorImg} alt="error icon" className="error__icon" />
+                Event Date is required
+              </p>
+            )}
+            <label className="booking__label">Choose the experience</label>
+            <select
+              id="price"
+              name="price"
+              onChange={handleChangePrice}
+              value={price}
+              type="select"
+              className="booking__input"
+              placeholder="Choose the experience"
+            >
+              <option value=""></option>
+              <option value="Basic $90-$120">Basic $90-$120</option>
+              <option value="Premium $120-$180">Premium $120-$180</option>
+              <option value="High End $180-$220">High-End $180-$220</option>
+            </select>
+            {priceError && (
+              <p className="booking__error">
+                <img src={errorImg} alt="error icon" className="error__icon" />
+                This field is required!
+              </p>
+            )}
+            <label className="booking__label">Number Of Guests</label>
+            <input
+              id="guests"
+              type="number"
+              min="2"
+              max="10"
+              placeholder="Number of Guests"
+              className="booking__input"
+              onChange={handleChangeGuests}
+              value={guests}
+            />
+            {guestError && (
+              <p className="booking__error">
+                <img src={errorImg} alt="error icon" className="error__icon" />
+                This field is required!
+              </p>
+            )}
+            <label className="booking__label">Dietary restrictions</label>
+            <textarea
+              id="allergies"
+              name="allergies"
+              placeholder="Dietary Restrictions"
+              className="booking__text-area"
+              onChange={handleChangeAllergies}
+              value={allergies}
+            ></textarea>
+            {allergiesError && (
+              <p className="booking__error">
+                <img src={errorImg} alt="error icon" className="error__icon" />
+                This field is required!
+              </p>
+            )}
+            <label className="booking__label">
               Tell us more About your Event
             </label>
-              <textarea
-                id="details"
-                name="details"
-                placeholder="Tell us more..."
-                className="booking__text-area"
-                onChange={handleChangeDetails}
-                value={details}
-              ></textarea>
-              {detailError && (
-                <p className="booking__error">
-                  <img
-                    src={errorImg}
-                    alt="error icon"
-                    className="error__icon"
-                  />
-                  This field is required!
-                </p>
-              )}
+            <textarea
+              id="details"
+              name="details"
+              placeholder="Tell us more..."
+              className="booking__text-area"
+              onChange={handleChangeDetails}
+              value={details}
+            ></textarea>
+            {detailError && (
+              <p className="booking__error">
+                <img src={errorImg} alt="error icon" className="error__icon" />
+                This field is required!
+              </p>
+            )}
             <button onClick={sendText} className="booking__btn">
               Submit
             </button>
