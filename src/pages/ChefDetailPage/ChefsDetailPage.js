@@ -179,8 +179,8 @@ function ChefsDetailPage() {
             </div>
           </Link>
         </div>
-        </div>
       </div>
+    </div>
   );
 }
 

@@ -16,6 +16,13 @@ Chefy is my capstone project for BrainStation's full-stack bootcamp. Where we ha
 
 Thank you for checking out my project!
 
+## Visit Chefy with the following link:
+
+```
+www.chefsdelivered.ca
+
+```
+
 ![Alt text](/src/assets/images/chefy-home.jpg "Chefy Home Page")
 
 ## 💻 Main tech Tools used for this project

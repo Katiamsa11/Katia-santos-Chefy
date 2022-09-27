@@ -4,7 +4,7 @@ import Profile from "../components/Profile/Profile";
 
 function ProfilePage() {
   //function to change tab title dinamically
-  TabTitle("Profile");
+  TabTitle("My Account");
   window.scrollTo({ top: 0, behavior: "smooth" });
   return <Profile />;
 }

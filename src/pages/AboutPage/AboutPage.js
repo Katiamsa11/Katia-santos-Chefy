@@ -4,9 +4,9 @@ import { TabTitle } from "../../utils/Utils";
 import pan from "../../assets/images/pan.png";
 import pepper from "../../assets/images/pepper.png";
 import { Link } from "react-router-dom";
-import listIcon from "../../assets/icons/list-icon.svg";
+import listIcon from "../../assets/icons/list-solid.svg";
 import chefHatIcon from "../../assets/icons/chef-hat.png";
-import wineIcon from "../../assets/icons/wine-glass-icon.svg";
+import wineIcon from "../../assets/icons/wine.svg";
 import chef1 from "../../assets/chefs-images/chef-01.jpg";
 import chef2 from "../../assets/chefs-images/chef-02.jpg";
 import chef3 from "../../assets/chefs-images/chef-03.jpg";
@@ -113,7 +113,7 @@ function AboutPage() {
         </h2>
         <div className="landing__steps-container">
           <div data-aos="fade-up" data-aos-delay="300" className="landing__box">
-            <img className="landing__icon" src={listIcon} alt="list" />
+            <img className="landing__icon" src={chefHatIcon} alt="list" />
             <div className="landing__text-box">
               <h3 className="landing__subheader">select a chef</h3>
               <p className="landing__description">
@@ -130,7 +130,7 @@ function AboutPage() {
           >
             <img
               className="landing__icon"
-              src={chefHatIcon}
+              src={listIcon}
               alt="moving chef hat"
             />
             <div className="landing__text-box">

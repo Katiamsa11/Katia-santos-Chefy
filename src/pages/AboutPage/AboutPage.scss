@@ -200,7 +200,9 @@
 
     &__icon {
         height: 6rem;
+        filter: invert(39%) sepia(42%) saturate(359%) hue-rotate(160deg) brightness(93%) contrast(91%);
     }
+
 
     &__subheader {
         font-family: $roboto;

@@ -3,7 +3,7 @@ import { deleteBookings, fetchBookings } from "../../utils/Utils";
 import { useState, useEffect } from "react";
 import LoadingPage from "../Loading/Loading";
 import "../../components/Profile/Profile.scss";
-import userIcon from "../../assets/icons/user.svg"
+import userIcon from "../../assets/icons/user.svg";
 
 function Profile() {
   const [allBookings, setAllBookings] = useState([]);
@@ -20,7 +20,7 @@ function Profile() {
       });
   }, []);
 
-  if (!allBookings) {
+  if (allBookings.length === 0) {
     return <LoadingPage />;
   }
 
@@ -63,7 +63,7 @@ function Profile() {
             <div className="profile__flex-container" key={booking.id}>
               <div className="profile__flex-card">
                 <div className="profile__title-container">
-                <h3 className="profile__event-name">{booking.eventName}</h3>
+                  <h3 className="profile__event-name">{booking.eventName}</h3>
                   <h2 className="profile__logo">chefy</h2>
                 </div>
                 <div className="profile__description">
