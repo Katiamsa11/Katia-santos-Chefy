@@ -3,6 +3,7 @@ import { deleteBookings, fetchBookings } from "../../utils/Utils";
 import { useState, useEffect } from "react";
 import LoadingPage from "../Loading/Loading";
 import "../../components/Profile/Profile.scss";
+import userIcon from "../../assets/icons/user.svg"
 
 function Profile() {
   const [allBookings, setAllBookings] = useState([]);
@@ -51,10 +52,10 @@ function Profile() {
     <main className="profile">
       <div className="profile__wrapper">
         <div className="profile__top">
-          <div className="profile__icon"></div>
-          <h2 className="profile__subtitle">Welcome User</h2>
+          <img className="profile__icon" src={userIcon} alt="user icon" />
+          <h2 className="profile__subtitle">Your Events</h2>
         </div>
-        <h1 className="profile__title">Your Events</h1>
+        <h1 className="profile__title">Welcome User</h1>
       </div>
       <section className="profile__cards">
         {allBookings.map((booking) => {
@@ -62,8 +63,8 @@ function Profile() {
             <div className="profile__flex-container" key={booking.id}>
               <div className="profile__flex-card">
                 <div className="profile__title-container">
+                <h3 className="profile__event-name">{booking.eventName}</h3>
                   <h2 className="profile__logo">chefy</h2>
-                  <h3 className="profile__event-name">{booking.eventName}</h3>
                 </div>
                 <div className="profile__description">
                   <div className="profile__text-container">
@@ -79,7 +80,7 @@ function Profile() {
                     <p className="profile__item">{booking.eventDate}</p>
                   </div>
                   <div className="profile__text-container">
-                    Estimated Price To Pay:
+                    Estimated Price:
                     <p className="profile__item">{booking.price}</p>
                   </div>
                   <div className="profile__text-container">

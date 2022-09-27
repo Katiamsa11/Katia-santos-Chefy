@@ -16,7 +16,7 @@
         }
 
         @include desktop {
-            width: calc((100vw)/4);;
+            width: 20rem;
         }
     }
 
@@ -51,8 +51,8 @@
         }
 
         @include desktop {
-            height: calc((100vw - 3rem - 3rem - 4rem)/4);
-            width: calc((100vw)/4);
+            height: 17.5rem;
+            width: 20rem;
         }
     }
 

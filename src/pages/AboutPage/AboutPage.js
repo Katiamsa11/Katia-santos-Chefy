@@ -36,7 +36,7 @@ function AboutPage() {
         <div className="landing__hero-text">
           <h1 className="landing__hero-title">chefy.</h1>
           <h2 className="landing__slogan">chefs delivered</h2>
-          <Link to="/home" className="landing__hero-link">
+          <Link to="/get-started" className="landing__hero-link">
             <div className="landing__hero-button">
               <h4 className="landing__button-title">Get Started</h4>
             </div>
@@ -154,7 +154,10 @@ function AboutPage() {
             </div>
           </div>
         </div>
-        <Link to="/home" className="landing__hero-link landing__steps-link">
+        <Link
+          to="/get-started"
+          className="landing__hero-link landing__steps-link"
+        >
           <div className="landing__hero-button landing__steps-button">
             <h4 className="landing__button-title landing__steps-link">
               Get Started

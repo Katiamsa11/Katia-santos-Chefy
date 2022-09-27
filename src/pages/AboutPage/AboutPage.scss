@@ -81,6 +81,7 @@
 
     &__pepper-container {
         text-align: end;
+        margin-top: 3rem;
 
         @include desktop {
             align-self: flex-start;
