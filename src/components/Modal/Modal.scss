@@ -15,31 +15,32 @@
   justify-content: center;
 
   @include tablet {
-      padding-top: 11rem;
-      padding-left: 3rem;
-      padding-right: 3rem;
+      padding: 0 3rem;
+  }
+
+  @include desktop {
+    padding: 0;
   }
   &__text {
       display: flex;
       flex-direction: column;
       text-align: center;
-      height: 15rem;
-      width: 100%;
       padding: 1rem;
       margin: 0 .5rem;
       background-color: $color-background-neutral;
+      border-radius: 15px;
       @include tablet {
           height:auto;
           width: auto;
       }
       @include desktop {
-          max-width: 40rem;
+          width: 40rem;
           margin: 0 auto;
       }
   }
 
   &__container {
-      margin: 0 auto;
+
       @include tablet {
         display: flex;
         align-items: center;
@@ -49,33 +50,27 @@
           padding-right: 4rem;
       }
   }
-
-  &__title {
-    text-align: center;
-    font-family: $yaseva;
-    color: $color-text-primary;
-
-    @include tablet {
-    font-size: 1.5rem;
-    }
-  }
-
   &__heading {
     color: $color-text-primary;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       line-height: 2.25rem;
       font-weight: 600;
-      @include tablet {
-      font-size: 1.5rem;
-      line-height: 2.5rem;
       margin: 0;
+      @include tablet {
+      font-size: 2rem;
+      line-height: 2.5rem;
       }
   }
 
   &__confirmation {
     padding-bottom: 1rem;
+    font-size: 1rem;
   }
 
+  &__title {
+    font-family: $yaseva;
+    color:$color-text-primary ;
+  }
 
   &__confirm {
     cursor: pointer;
@@ -87,23 +82,12 @@
    text-transform: uppercase;
    border-radius: 10px;
    margin-bottom: 1rem;
+   font-size: 1rem;
    @include tablet {
     padding: .5rem 4rem;
    }
    
   }
 
-  &__cancel {
-  display: none;
-    cursor: pointer;
-    @include tablet {
-      display: inline-block;
-      text-decoration: none;
-      color:$color-background-secondary;
 
-    }
-  }
-
-
- 
 }

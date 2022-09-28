@@ -1,6 +1,6 @@
 # 👾 About Me
 
-👩‍💻 Currently finalizing Web development Bootcamp with Brain Station
+👩‍💻 Full stack web developer
 
 🧠 Love for tech, food and innovation
 

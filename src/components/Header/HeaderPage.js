@@ -9,7 +9,7 @@ import logout from "../../assets/icons/logout.svg";
 function HeaderPage() {
   return (
     <div className="header">
-      <Link to="/" className="header__link header__logo-link">
+      <Link to="/" className="header__logo-link">
         <h2 className="header__logo">chefy.</h2>
       </Link>
       <nav className="header__container" id="main">

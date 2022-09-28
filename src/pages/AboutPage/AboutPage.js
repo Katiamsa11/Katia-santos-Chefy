@@ -21,7 +21,8 @@ import AOS from "aos";
 
 function AboutPage() {
   //function to change tab title dinamically
-  TabTitle("About");
+  TabTitle("chefy");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   AOS.init();
 
@@ -54,7 +55,7 @@ function AboutPage() {
       </section>
       <section data-aos="fade-up" className="intro">
         <div className="intro__text">
-          <h2 className="intro__heading">about chefy.</h2>
+          <h2 className="intro__heading">About chefy.</h2>
           <p className="intro__paragraph">
             chefy is a web-based platform to connect chefs with households for
             private in-home dining experiences. Whether an intimate dinner for 2
@@ -109,13 +110,13 @@ function AboutPage() {
       </section>
       <section className="landing__section">
         <h2 data-aos="fade-up" className="landing__steps-header">
-          how it works
+          How it works
         </h2>
         <div className="landing__steps-container">
           <div data-aos="fade-up" data-aos-delay="300" className="landing__box">
             <img className="landing__icon" src={chefHatIcon} alt="list" />
             <div className="landing__text-box">
-              <h3 className="landing__subheader">select a chef</h3>
+              <h3 className="landing__subheader">Select a chef</h3>
               <p className="landing__description">
                 Explore different chefs to learn more about their specialties
                 and experience. Filter through chefs in your city to find the
@@ -134,7 +135,7 @@ function AboutPage() {
               alt="moving chef hat"
             />
             <div className="landing__text-box">
-              <h3 className="landing__subheader">submit your preferences</h3>
+              <h3 className="landing__subheader">Submit your preferences</h3>
               <p className="landing__description">
                 Once you have selected a chef - tell them more about your event
                 including number of guests, dietary restrictions and special
@@ -145,7 +146,7 @@ function AboutPage() {
           <div data-aos="fade-up" data-aos-delay="900" className="landing__box">
             <img className="landing__icon" src={wineIcon} alt="wine glass" />
             <div className="landing__text-box">
-              <h3 className="landing__subheader">bon appétit</h3>
+              <h3 className="landing__subheader">Bon appétit</h3>
               <p className="landing__description">
                 The chef you selected will come to your home with all necessary
                 ingredients and cook a delicious meal for you and your guests to
@@ -168,7 +169,7 @@ function AboutPage() {
       <section data-aos="fade-up" className="me">
         <img className="me__img" src={katia} alt="katia santos" />
         <div className="me__text">
-          <h2 className="me__header">about me</h2>
+          <h2 className="me__header">About me</h2>
           <p className="me__paragraph">
             In June 2020 I launched my own private catering business. With very
             little advertising I was quickly overwhelmed with the immense demand

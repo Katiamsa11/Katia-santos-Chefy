@@ -32,7 +32,7 @@ function BookingForm() {
   const [text, setText] = useState({
     recipient: "",
     textmessage:
-      "Your request has been sent to the chef. You will receive a confirmation shortly. Thanks for choosing Chefy!                                Find me on www.linkedin.com/in/katiamsa11",
+      "Your request has been sent to the chef. You will receive a confirmation shortly. Thanks for choosing Chefy!                                Find me on Linkedin: www.linkedin.com/in/katiamsa11",
   });
 
   const sendText = (_) => {
@@ -209,6 +209,7 @@ function BookingForm() {
             <label className="booking__label"> Phone Number </label>
             <input
               id="phone"
+              type="tel"
               placeholder="Phone Number"
               className="booking__input"
               value={text.recipient}

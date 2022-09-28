@@ -38,6 +38,8 @@
 
         @include tablet {
             display: block;
+            text-decoration: none;
+            color:$color-cta-primary ;
         }
     }
 
@@ -61,6 +63,10 @@
         font-family: $yaseva;
         font-size: 2rem;
         margin: 0;
+        }
+
+        &:hover {
+            color:$color-background-secondary ;
         }
     }
 

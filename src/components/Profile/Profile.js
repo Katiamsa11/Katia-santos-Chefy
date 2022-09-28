@@ -1,7 +1,6 @@
 import React from "react";
 import { deleteBookings, fetchBookings } from "../../utils/Utils";
 import { useState, useEffect } from "react";
-import LoadingPage from "../Loading/Loading";
 import "../../components/Profile/Profile.scss";
 import userIcon from "../../assets/icons/user.svg";
 
@@ -19,10 +18,6 @@ function Profile() {
         setIsError(true);
       });
   }, []);
-
-  if (allBookings.length === 0) {
-    return <LoadingPage />;
-  }
 
   if (isError) {
     return <h1>....There was an unexpected Error. Refresh page!</h1>;

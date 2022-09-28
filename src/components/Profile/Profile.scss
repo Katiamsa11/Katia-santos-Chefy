@@ -3,7 +3,7 @@
 
 
 .profile {
- 
+  min-height: 87vh;
   
   &__wrapper {
     padding-bottom: 1rem;
@@ -170,6 +170,7 @@
     margin: 0;
     color:$color-text-primary;
     padding: .25rem 0 .25rem .5rem;
+    word-break: break-word;
 
     @include tablet {
       font-size: 1rem;
