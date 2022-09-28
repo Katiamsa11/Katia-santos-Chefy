@@ -42,6 +42,7 @@ function Profile() {
         setIsError("Something Went Wrong! Please Try Again.");
       });
   };
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <main className="profile">

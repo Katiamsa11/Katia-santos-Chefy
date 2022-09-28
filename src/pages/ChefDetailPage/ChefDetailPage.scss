@@ -184,7 +184,12 @@
 
     &__booking-link {
         text-decoration: none;
+
+        @include desktop {
+        width: 7.5rem;
     }
+    
+}
 
     &__booking-card {
         width: calc(100vw - 1rem - 1rem);

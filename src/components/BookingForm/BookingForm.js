@@ -185,6 +185,8 @@ function BookingForm() {
     resetForm();
   };
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <section className="booking">
       <div className="booking__wrapper">
