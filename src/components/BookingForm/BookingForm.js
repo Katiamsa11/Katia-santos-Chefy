@@ -185,7 +185,6 @@ function BookingForm() {
     resetForm();
   };
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <section className="booking">
@@ -289,7 +288,7 @@ function BookingForm() {
               id="guests"
               type="number"
               min="2"
-              max="10"
+              max="50"
               placeholder="Number of Guests"
               className="booking__input"
               onChange={handleChangeGuests}
